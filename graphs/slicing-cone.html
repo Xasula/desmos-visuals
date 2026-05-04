@@ -20,13 +20,13 @@
         <script>
             const elt = document.getElementById("calculator");
 
-            const calculator = Desmos.GraphingCalculator(elt, {
+            const calculator = Desmos.Calculator3D(elt, {
                 expressions:  true,
                 settingsMenu: true,
                 zoomButtons:  true
             });
 
-            fetch("polar-roses-desmos-state.json")
+            fetch("slicing-cone-desmos-state.json")
                 .then(response => response.json())
                 .then(state => {calculator.setState(state)})
                 .catch(error => {console.error("Error loading Desmos state:", error);});
