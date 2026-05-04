@@ -11,6 +11,37 @@
     <body>
         <h1>Eccentricity: Ellipse vs. Hyperbola</h1>
 
+        <p>
+            This visualization shows how a centered conic changes as <code>c</code>, the
+            distance from the origin to each focus, changes relative to <code>a</code>.
+            The value <code>e = c/a</code> is the eccentricity, so increasing
+            <code>c</code> also increases the eccentricity.
+        </p>
+
+        <p>
+            When <code>c &lt; a</code>, the graph is an ellipse. In this case, the foci
+            lie inside the ellipse, and the relationship between the parameters is
+            <code>a² = b² + c²</code>. As <code>c</code> gets larger, the ellipse becomes
+            more stretched out and less circle-like.
+        </p>
+
+        <p>
+            When <code>c &gt; a</code>, the graph becomes a hyperbola. In this case, the
+            eccentricity <code>e</code> is greater than <code>1</code>, and the foci lie outside the
+            central rectangle. The relationship between the parameters changes to
+            <code>c² = a² + b²</code>.
+        </p>
+
+        <p>
+            The red points mark the vertices at <code>(±a, 0)</code>; connecting them
+            gives the transverse axis for the hyperbola and the major axis for the ellipse.
+            The blue points mark <code>(0, ±b)</code>; connecting them gives the conjugate
+            axis for the hyperbola and the minor axis for the ellipse. The purple points
+            mark the foci at <code>(±c, 0)</code>. The dashed orange lines show the
+            hyperbola's asymptotes, and the dotted green rectangle shows the ellipse's
+            bounding box or the hyperbola's central rectangle.
+        </p>
+
         <div id="calculator"></div>
 
         <p>
