@@ -12,7 +12,33 @@
         <h1>Polar Rose Petal Overlap Visualizer</h1>
 
         <p>
-            A visualization showing how the petals of <code>r = cos(nθ)</code> behave for odd versus even values of <code>n</code>.
+            This visualization shows how the petals of <code>r = cos(nθ)</code>
+            behave for odd versus even values of <code>n</code>.
+        </p>
+
+        <p>
+            If <code>n</code> is even, the rose curve has <code>2n</code> petals.
+            If <code>n</code> is odd, it has only <code>n</code> petals.
+            Why?
+        </p>
+
+        <p>
+            The value of <code>cos(nθ)</code> oscillates between <code>1</code> and
+            <code>-1</code>. When <code>cos(nθ) &gt; 0</code>, the radius
+            <code>r</code> is positive, so the point is plotted in the usual direction.
+            In this visualization, those parts are shown in red.
+        </p>
+
+        <p>
+            When <code>cos(nθ) &lt; 0</code>, the radius <code>r</code> is negative. A negative radius means the point is plotted in the opposite direction,
+            shifted by <code>π</code> radians. In this visualization, those parts are shown in blue.
+        </p>
+
+        <p>
+            For odd values of <code>n</code>, the blue petals land exactly on top of
+            the red petals, so only <code>n</code> distinct petals appear. For even
+            values of <code>n</code>, the blue petals do not overlap with the red ones,
+            so the graph shows <code>2n</code> distinct petals.
         </p>
 
         <div id="calculator"></div>
