@@ -1,0 +1,176 @@
+{
+  "version": 11,
+  "randomSeed": "f1d9a0e38ce5dae5072a81e138ac075d",
+  "graph": {
+    "viewport": {
+      "xmin": -2.450715125705031,
+      "ymin": -3.545895940990307,
+      "xmax": 5.604848177551146,
+      "ymax": 2.503897063975269
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-2.450715125705031",
+      "xmax": "5.604848177551146",
+      "ymin": "-3.545895940990307",
+      "ymax": "2.503897063975269"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "12",
+        "title": "The nth derivatives of f(x)",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "23",
+        "folderId": "12",
+        "text": "Desmos doesn't support general derivatives, so we have to manually write out the derivatives as shown in D below."
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "12",
+        "color": "#c74440",
+        "latex": "D=\\left[f'\\left(c\\right),\\ f''\\left(c\\right),\\ f'''\\left(c\\right),\\ f''''\\left(c\\right),\\ f'''''\\left(c\\right),\\ f''''''\\left(c\\right),\\ f'''''''\\left(c\\right),\\ f''''''''\\left(c\\right),\\ f'''''''''\\left(c\\right),\\ f''''''''''\\left(c\\right)\\right]",
+        "hidden": true,
+        "labelSize": "1",
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "text",
+        "id": "27",
+        "folderId": "12",
+        "text": "The anchor point at x=c"
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "folderId": "12",
+        "color": "#6042a6",
+        "latex": "\\left(c,\\ f\\left(c\\right)\\right)",
+        "showLabel": true,
+        "label": "x=${c}"
+      },
+      {
+        "type": "text",
+        "id": "25",
+        "text": "Taylor Expansion for f(x) centered at x=c"
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "color": "#6042a6",
+        "latex": "T\\left(x\\right)=f\\left(c\\right)+\\sum_{k=1}^{n}\\frac{D\\left[k\\right]}{k!}\\left(x-c\\right)^{k}"
+      },
+      {
+        "type": "text",
+        "id": "15",
+        "text": "f(x) is the target function (you can modify)."
+      },
+      {
+        "type": "expression",
+        "id": "2",
+        "color": "#fa7e19",
+        "latex": "f\\left(x\\right)=\\ln\\left(x+1\\right)",
+        "labelSize": "1",
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "text",
+        "id": "17",
+        "text": "c is the center of approximation (you can drag the point)"
+      },
+      {
+        "type": "expression",
+        "id": "11",
+        "color": "#6042a6",
+        "latex": "c=0"
+      },
+      {
+        "type": "text",
+        "id": "21",
+        "text": "Order of the polynomial (1~10)"
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#fa7e19",
+        "latex": "n=4",
+        "hidden": true,
+        "labelSize": "1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "step": "1"
+        },
+        "fillOpacity": "0.4"
+      },
+      {
+        "type": "folder",
+        "id": "37",
+        "title": "Error",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "29",
+        "folderId": "37",
+        "text": "Error: how good is T(x)?"
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "folderId": "37",
+        "color": "#c74440",
+        "latex": "R\\left(x\\right)=\\left|T\\left(x\\right)-f\\left(x\\right)\\right|",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "32",
+        "folderId": "37",
+        "color": "#2d70b3",
+        "latex": "R\\left(0.25\\right)"
+      },
+      {
+        "type": "folder",
+        "id": "38",
+        "title": "Lagrange Error Bound",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "43",
+        "folderId": "38",
+        "text": "M is the maximum absolute value of the nth derivative of f between x and c"
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "folderId": "38",
+        "color": "#c74440",
+        "latex": "M=?"
+      },
+      {
+        "type": "expression",
+        "id": "40",
+        "folderId": "38",
+        "color": "#2d70b3",
+        "latex": "L\\left(x\\right)=\\frac{M}{\\left(n+1\\right)!}\\left|x-c\\right|^{n+1}"
+      },
+      {
+        "type": "expression",
+        "id": "41",
+        "folderId": "38",
+        "color": "#388c46",
+        "latex": "L\\left(0.25\\right)"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

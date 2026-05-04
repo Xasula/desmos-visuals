@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Taylor Series Expansions</title>
+        <link rel="stylesheet" href="../style.css">
+
+        <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=c8a09e8f7af44edcaa08fdf5892c43b4"></script>
+    </head>
+
+    <body>
+        <h1>Taylor Series Expansions</h1>
+
+        <div id="calculator"></div>
+
+        <p>
+            <a href="../index.html">← Back to gallery</a>
+        </p>
+        
+        <script>
+            const elt = document.getElementById("calculator");
+
+            const calculator = Desmos.GraphingCalculator(elt, {
+                expressions:  true,
+                settingsMenu: true,
+                zoomButtons:  true
+            });
+
+            fetch("taylor-series-desmos-state.json")
+                .then(response => response.json())
+                .then(state => {calculator.setState(state)})
+                .catch(error => {console.error("Error loading Desmos state:", error);});
+        </script>
+    </body>
+</html>
