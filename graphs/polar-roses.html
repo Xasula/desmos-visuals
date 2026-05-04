@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <title>Polar Rose Petal Overlap Visualizer</title>
         <link rel="stylesheet" href="../style.css">
+
+        <script src="https:www.desmos.com/api/v1.12/calculator.js?apiKey=c8a09e8f7af44edcaa08fdf5892c43b4"></script>
     </head>
 
     <body>
@@ -13,8 +15,25 @@
             A visualization showing how the petals of <code>r = cos(nθ)</code> behave for odd versus even values of <code>n</code>.
         </p>
 
+        <div id="calculator"></div>
+
         <p>
             <a href="../index.html">← Back to gallery</a>
         </p>
+
+        <script>
+            const elt = document.getElementById("calculator");
+
+            const calculator = Desmos.GraphingCalculator(elt, {
+                expressions:  true,
+                settingsMenu: true,
+                zoomButtons:  true
+            });
+
+            fetch("polar-roses-desmos-state.json")
+                .then(response => response.json())
+                .then(state => {calculator.setState(state)})
+                .catch(error => {console.error("Error loading Desmos state:", error);});
+        </script>
     </body>
 </html>

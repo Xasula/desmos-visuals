@@ -1,0 +1,187 @@
+{
+  "version": 11,
+  "randomSeed": "c3cc9b1265c99b560464b227833e6ade",
+  "graph": {
+    "viewport": {
+      "xmin": -1.5246925315871884,
+      "ymin": -1.2404086926866873,
+      "xmax": 1.529053357014051,
+      "ymax": 1.0529790966358943
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-1.5246925315871884",
+      "xmax": "1.529053357014051",
+      "ymin": "-1.2404086926866873",
+      "ymax": "1.0529790966358943"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "58",
+        "title": "Indicator",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "59",
+        "folderId": "58",
+        "color": "#000000",
+        "latex": "\\left(1.1a,\\ 0.15a\\right)",
+        "showLabel": true,
+        "label": "a=${a}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "62",
+        "folderId": "58",
+        "color": "#000000",
+        "latex": "n_{rounded}=\\operatorname{round}\\left(n\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "60",
+        "folderId": "58",
+        "color": "#000000",
+        "latex": "\\left(1.1a,\\ 0.1a\\right)",
+        "showLabel": true,
+        "label": "n=${n_rounded}",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "52",
+        "title": "Reference",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "48",
+        "folderId": "52",
+        "text": "Radius of rose is a"
+      },
+      {
+        "type": "expression",
+        "id": "2",
+        "folderId": "52",
+        "color": "#2d70b3",
+        "latex": "a=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "10",
+        "folderId": "52",
+        "color": "#6042a6",
+        "latex": "r\\ge a",
+        "lineStyle": "DASHED",
+        "polarDomain": {
+          "min": "",
+          "max": "2\\pi"
+        }
+      },
+      {
+        "type": "text",
+        "id": "49",
+        "folderId": "52",
+        "text": "Red: Default petals\nBlue:\n - Pops up when n is an even number\n - Overlaps with Red if n is an odd number"
+      },
+      {
+        "type": "expression",
+        "id": "37",
+        "folderId": "52",
+        "color": "#2d70b3",
+        "latex": "r=a\\cos\\left(k\\cdot\\theta\\right)\\ \\left\\{\\cos\\left(n\\theta\\right)<0\\right\\}",
+        "polarDomain": {
+          "min": "0",
+          "max": "2\\pi"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "52",
+        "color": "#c74440",
+        "latex": "r=a\\cos\\left(k\\cdot\\theta\\right)\\ \\left\\{\\cos\\left(n\\theta\\right)>0\\right\\}",
+        "polarDomain": {
+          "min": "0",
+          "max": "2\\pi"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "63",
+        "folderId": "52",
+        "color": "#c74440",
+        "latex": "t_{peak}=\\left[0,...,\\ n-1\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "67",
+        "folderId": "52",
+        "color": "#000000",
+        "latex": "\\theta_{blue}=\\frac{2t_{peak}+1}{k}\\pi"
+      },
+      {
+        "type": "expression",
+        "id": "70",
+        "folderId": "52",
+        "color": "#388c46",
+        "latex": "\\theta_{red}=\\frac{2t_{peak}}{k}\\pi"
+      },
+      {
+        "type": "expression",
+        "id": "66",
+        "folderId": "52",
+        "color": "#6042a6",
+        "latex": "p_{blue}=-a\\left(\\cos\\left(\\theta_{blue}\\right),\\ \\sin\\left(\\theta_{blue}\\right)\\right)\\ \\left\\{n>1\\right\\}"
+      },
+      {
+        "type": "expression",
+        "id": "65",
+        "folderId": "52",
+        "color": "#c74440",
+        "latex": "p_{red}=a\\left(\\cos\\left(\\theta_{red}\\right),\\ \\sin\\left(\\theta_{red}\\right)\\right)\\ \\left\\{n>1\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "56",
+        "folderId": "52",
+        "text": "The weird sin and stuff is just for cool transitions, don't worry about them\n(if n is an integer, k would also be integer. Those situations are the ones that actually mean something)"
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "folderId": "52",
+        "color": "#c74440",
+        "latex": "k=n+\\frac{1}{\\pi}\\left(\\sin^{2}\\left(n\\pi-1\\right)-1\\right)+0.092923117003"
+      },
+      {
+        "type": "text",
+        "id": "36",
+        "text": "n: Press Play to change n value\n(stop at integer n value to see how r = cos(nθ) looks like"
+      },
+      {
+        "type": "expression",
+        "id": "20",
+        "color": "#2d70b3",
+        "latex": "n=0.639",
+        "slider": {
+          "hardMin": true,
+          "animationPeriod": 40000,
+          "isPlaying": true,
+          "min": "0"
+        }
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

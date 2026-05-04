@@ -1,0 +1,14 @@
+body {
+    font-famliy: Arial, sans-serif;
+    max-width:   900px;
+    margin:      40px auto;
+    padding:     0 20px;
+    line-height: 1.6;
+}
+
+#calculator {
+    width:  100%;
+    height: 600px;
+    margin: 30px 0;
+    border: 1px solid #ddd
+}
