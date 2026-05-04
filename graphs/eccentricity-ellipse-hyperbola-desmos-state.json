@@ -1,0 +1,183 @@
+{
+  "version": 11,
+  "randomSeed": "2d2cdbb081035db5a0ec6f2f008cc7cc",
+  "graph": {
+    "viewport": {
+      "xmin": -15.589329756631273,
+      "ymin": -12.089425671824388,
+      "xmax": 14.983283795581634,
+      "ymax": 11.610513664518075
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-15.589329756631273",
+      "xmax": "14.983283795581634",
+      "ymin": "-12.089425671824388",
+      "ymax": "11.610513664518075"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "41",
+        "title": "Central Rectangle / Bounding Box",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "23",
+        "folderId": "41",
+        "color": "#388c46",
+        "latex": "\\left|x\\right|=\\left|a\\right|\\ \\left\\{\\left|y\\right|<\\left|b\\right|\\right\\}",
+        "lineStyle": "DOTTED"
+      },
+      {
+        "type": "expression",
+        "id": "24",
+        "folderId": "41",
+        "color": "#388c46",
+        "latex": "\\left|y\\right|=\\left|b\\right|\\ \\left\\{\\left|x\\right|<\\left|a\\right|\\right\\}",
+        "lineStyle": "DOTTED"
+      },
+      {
+        "type": "folder",
+        "id": "27",
+        "title": "Curves",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "33",
+        "folderId": "27",
+        "text": "The conic"
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "folderId": "27",
+        "color": "#000000",
+        "latex": "\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{a^{2}-c^{2}}=1"
+      },
+      {
+        "type": "text",
+        "id": "35",
+        "folderId": "27",
+        "text": "Asymptotes of the hyperbola"
+      },
+      {
+        "type": "expression",
+        "id": "22",
+        "folderId": "27",
+        "color": "#fa7e19",
+        "latex": "\\left|y\\right|=\\left|\\frac{b}{a}x\\right|\\ \\left\\{a<c\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "folder",
+        "id": "25",
+        "title": "Points",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "11",
+        "folderId": "25",
+        "color": "#c74440",
+        "latex": "\\left(-a,0\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "12",
+        "folderId": "25",
+        "color": "#c74440",
+        "latex": "\\left(a,0\\right)",
+        "showLabel": true,
+        "label": "a=${a}",
+        "labelOrientation": "below_right"
+      },
+      {
+        "type": "expression",
+        "id": "16",
+        "folderId": "25",
+        "color": "#2d70b3",
+        "latex": "\\left(0,-b\\right)",
+        "pointSize": "12",
+        "movablePointSize": "12"
+      },
+      {
+        "type": "expression",
+        "id": "21",
+        "folderId": "25",
+        "color": "#2d70b3",
+        "latex": "\\left(0,b\\right)",
+        "showLabel": true,
+        "label": "b=${b_rounded}",
+        "pointSize": "12",
+        "movablePointSize": "12"
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "folderId": "25",
+        "color": "#2d70b3",
+        "latex": "b_{rounded}=\\operatorname{round}\\left(b,\\ 3\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "13",
+        "folderId": "25",
+        "color": "#6042a6",
+        "latex": "\\left(-c,0\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "14",
+        "folderId": "25",
+        "color": "#6042a6",
+        "latex": "\\left(c,0\\right)",
+        "showLabel": true,
+        "label": "c=${c}"
+      },
+      {
+        "type": "expression",
+        "id": "9",
+        "color": "#6042a6",
+        "latex": "a=5",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "color": "#000000",
+        "latex": "b=\\sqrt{\\left|a^{2}-c^{2}\\right|}"
+      },
+      {
+        "type": "expression",
+        "id": "10",
+        "color": "#000000",
+        "latex": "c=0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 8000,
+          "playDirection": -1,
+          "isPlaying": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "color": "#c74440",
+        "latex": "e_{ccentricity}=\\frac{c}{a}"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}
