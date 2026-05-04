@@ -3,16 +3,16 @@
   "randomSeed": "c3cc9b1265c99b560464b227833e6ade",
   "graph": {
     "viewport": {
-      "xmin": -1.4234793629308973,
-      "ymin": -1.0987102565678406,
-      "xmax": 1.6302665256703421,
-      "ymax": 1.1946775327546628
+      "xmin": -1.4730244918356739,
+      "ymin": -1.5248682207197746,
+      "xmax": 1.97436832771807,
+      "ymax": 1.0641515883201724
     },
     "__v12ViewportLatexStash": {
-      "xmin": "-1.4234793629308973",
-      "xmax": "1.6302665256703421",
-      "ymin": "-1.0987102565678406",
-      "ymax": "1.1946775327546628"
+      "xmin": "-1.4730244918356739",
+      "xmax": "1.97436832771807",
+      "ymin": "-1.5248682207197746",
+      "ymax": "1.0641515883201724"
     }
   },
   "expressions": {
@@ -24,14 +24,26 @@
         "collapsed": true
       },
       {
+        "type": "text",
+        "id": "78",
+        "folderId": "58",
+        "text": "Show the radius of the circle"
+      },
+      {
         "type": "expression",
         "id": "59",
         "folderId": "58",
         "color": "#000000",
-        "latex": "\\left(1.1a,\\ 0.3a\\right)",
+        "latex": "\\left(1.1a,\\ 0.25a\\right)",
         "showLabel": true,
         "label": "a=${a}",
         "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "80",
+        "folderId": "58",
+        "text": "Show the current value of n (to the nearest integer)"
       },
       {
         "type": "expression",
@@ -53,7 +65,7 @@
       {
         "type": "folder",
         "id": "52",
-        "title": "Misc",
+        "title": "Reference",
         "collapsed": true
       },
       {
@@ -69,11 +81,17 @@
         }
       },
       {
+        "type": "text",
+        "id": "74",
+        "folderId": "52",
+        "text": "Blue: r<0\nRed:  r>0"
+      },
+      {
         "type": "expression",
         "id": "37",
         "folderId": "52",
         "color": "#2d70b3",
-        "latex": "r=a\\cos\\left(k\\cdot\\theta\\right)\\ \\left\\{\\cos\\left(k\\theta\\right)<0\\right\\}",
+        "latex": "r=a\\cos\\left(k\\cdot\\theta\\right)\\ \\left\\{\\cos\\left(n\\theta\\right)<0\\right\\}",
         "polarDomain": {
           "min": "0",
           "max": "2\\pi"
@@ -84,11 +102,17 @@
         "id": "1",
         "folderId": "52",
         "color": "#c74440",
-        "latex": "r=a\\cos\\left(k\\cdot\\theta\\right)\\ \\left\\{\\cos\\left(k\\theta\\right)>0\\right\\}",
+        "latex": "r=a\\cos\\left(k\\cdot\\theta\\right)\\ \\left\\{\\cos\\left(n\\theta\\right)>0\\right\\}",
         "polarDomain": {
           "min": "0",
           "max": "2\\pi"
         }
+      },
+      {
+        "type": "text",
+        "id": "76",
+        "folderId": "52",
+        "text": "Plot the \"vertices\" of each petal"
       },
       {
         "type": "expression",
@@ -116,20 +140,20 @@
         "id": "66",
         "folderId": "52",
         "color": "#6042a6",
-        "latex": "p_{blue}=-a\\left(\\cos\\left(\\theta_{blue}\\right),\\ \\sin\\left(\\theta_{blue}\\right)\\right)\\ \\left\\{k>1\\right\\}"
+        "latex": "p_{blue}=-a\\left(\\cos\\left(\\theta_{blue}\\right),\\ \\sin\\left(\\theta_{blue}\\right)\\right)\\ \\left\\{n>1\\right\\}"
       },
       {
         "type": "expression",
         "id": "65",
         "folderId": "52",
         "color": "#c74440",
-        "latex": "p_{red}=a\\left(\\cos\\left(\\theta_{red}\\right),\\ \\sin\\left(\\theta_{red}\\right)\\right)\\ \\left\\{k>1\\right\\}"
+        "latex": "p_{red}=a\\left(\\cos\\left(\\theta_{red}\\right),\\ \\sin\\left(\\theta_{red}\\right)\\right)\\ \\left\\{n>1\\right\\}"
       },
       {
         "type": "text",
         "id": "56",
         "folderId": "52",
-        "text": "The weird sin and stuff is just for cool transitions, don't worry about them\n(if n is an integer, k would also be integer. Those situations are the ones that actually mean something)"
+        "text": "The weird \"k = ...\" thing below is to make sure that the graph stays on integer values a bit longer."
       },
       {
         "type": "expression",
@@ -141,7 +165,7 @@
       {
         "type": "text",
         "id": "48",
-        "text": "Radius of rose is a"
+        "text": "a is the radius of the rose's circumcircle"
       },
       {
         "type": "expression",
@@ -157,25 +181,25 @@
       },
       {
         "type": "text",
-        "id": "49",
-        "text": "Red: Default petals\nBlue:\n - Pops up when n is an even number\n - Overlaps with Red if n is an odd number"
-      },
-      {
-        "type": "text",
         "id": "36",
-        "text": "n: Press Play to change n value\n(stop at integer n value to see how r = cos(nθ) looks like"
+        "text": "n: Press Play to change n value\n(stop at integer n value to see how r = cos(nθ) looks like)"
       },
       {
         "type": "expression",
         "id": "20",
         "color": "#2d70b3",
-        "latex": "n=0.325",
+        "latex": "n=0.0375",
         "slider": {
           "hardMin": true,
           "animationPeriod": 40000,
           "isPlaying": true,
           "min": "0"
         }
+      },
+      {
+        "type": "text",
+        "id": "49",
+        "text": "Red: Default petals (r>0)\nBlue: (r<0)\n - Pops up when n is an even number\n - Overlaps with Red if n is an odd number"
       }
     ]
   },
