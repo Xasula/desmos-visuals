@@ -1,0 +1,195 @@
+{
+  "version": 11,
+  "randomSeed": "d8af2a72c8dd94c9c8831b397b364f31",
+  "graph": {
+    "viewport": {
+      "xmin": -16.125499718568438,
+      "ymin": -16.125499718568438,
+      "zmin": -16.125499718568438,
+      "xmax": 16.125499718568438,
+      "ymax": 16.125499718568438,
+      "zmax": 16.125499718568438
+    },
+    "worldRotation3D": [
+      0.47021010754941217,
+      -0.8215797541942683,
+      0.3223494412218425,
+      0.6776345282744406,
+      0.5700935953838319,
+      0.46454788622077614,
+      -0.5654324900889781,
+      1.6879988618750767e-13,
+      0.824794579972099
+    ],
+    "axis3D": [
+      0.821579754193537,
+      -0.570093595382848,
+      -1.44526718016637e-13
+    ],
+    "product": "graphing-3d",
+    "threeDMode": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-16.125499718568438",
+      "xmax": "16.125499718568438",
+      "ymin": "-16.125499718568438",
+      "ymax": "16.125499718568438",
+      "zmin": "-16.125499718568438",
+      "zmax": "16.125499718568438"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "49",
+        "title": "Cone and Plane",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "52",
+        "folderId": "49",
+        "text": "Cone with beta value"
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "49",
+        "color": "#3aaaa3",
+        "latex": "r=z\\tan\\beta",
+        "polarDomain": {
+          "min": "0",
+          "max": ""
+        }
+      },
+      {
+        "type": "text",
+        "id": "54",
+        "folderId": "49",
+        "text": "Slicing plane"
+      },
+      {
+        "type": "expression",
+        "id": "39",
+        "folderId": "49",
+        "color": "#aaaaaa",
+        "latex": "z=f\\left(x\\right)",
+        "extendTo3D": true
+      },
+      {
+        "type": "text",
+        "id": "56",
+        "folderId": "49",
+        "text": "Intersection of plane and cone"
+      },
+      {
+        "type": "expression",
+        "id": "41",
+        "folderId": "49",
+        "color": "#fa7e19",
+        "latex": "r=z\\tan\\beta\\ \\left\\{z=f\\left(x\\right)\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "58",
+        "folderId": "49",
+        "text": "Plane eq: z = f(x)"
+      },
+      {
+        "type": "text",
+        "id": "65",
+        "folderId": "49",
+        "text": "m is the \"slope\" of the plane"
+      },
+      {
+        "type": "expression",
+        "id": "63",
+        "folderId": "49",
+        "color": "#c74440",
+        "latex": "m_{plane}=\\cot\\left(\\arccos\\left(e_{ccentricity}\\ \\cos\\beta\\right)\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "44",
+        "folderId": "49",
+        "color": "#2d70b3",
+        "latex": "f\\left(x\\right)=\\left(x-x_{shift}\\right)m_{plane}+z_{shift}",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "62",
+        "text": "β: Half of cone width (default π/4)"
+      },
+      {
+        "type": "expression",
+        "id": "50",
+        "color": "#2d70b3",
+        "latex": "\\beta=0.785398163397",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "\\frac{\\pi}{2}-0.1"
+        }
+      },
+      {
+        "type": "text",
+        "id": "67",
+        "text": "e = 0:       circle\n0 < e < 1: ellipse\ne = 1:       parabola\ne > 1:       hyperbola"
+      },
+      {
+        "type": "expression",
+        "id": "43",
+        "color": "#c74440",
+        "latex": "e_{ccentricity}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "\\sec\\beta"
+        }
+      },
+      {
+        "type": "text",
+        "id": "60",
+        "text": "Shift the plane around"
+      },
+      {
+        "type": "expression",
+        "id": "42",
+        "color": "#000000",
+        "latex": "x_{shift}=2.45",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true
+        }
+      },
+      {
+        "type": "expression",
+        "id": "48",
+        "color": "#c74440",
+        "latex": "z_{shift}=5",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "73",
+        "text": "Anchor point of the plane"
+      },
+      {
+        "type": "expression",
+        "id": "71",
+        "color": "#2d70b3",
+        "latex": "\\left(x_{shift},\\ 0,\\ z_{shift}\\right)",
+        "pointSize": "2.6",
+        "movablePointSize": "2.6"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrate3dLineWidthZero": true,
+  "doNotMigrateMovablePointStyle": true
+}
