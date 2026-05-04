@@ -91,7 +91,7 @@
         "id": "37",
         "folderId": "52",
         "color": "#2d70b3",
-        "latex": "r=a\\cos\\left(k\\cdot\\theta\\right)\\ \\left\\{\\cos\\left(n\\theta\\right)<0\\right\\}",
+        "latex": "r=a\\cos\\left(k\\cdot\\theta\\right)\\ \\left\\{\\cos\\left(k\\theta\\right)<0\\right\\}",
         "polarDomain": {
           "min": "0",
           "max": "2\\pi"
@@ -102,7 +102,7 @@
         "id": "1",
         "folderId": "52",
         "color": "#c74440",
-        "latex": "r=a\\cos\\left(k\\cdot\\theta\\right)\\ \\left\\{\\cos\\left(n\\theta\\right)>0\\right\\}",
+        "latex": "r=a\\cos\\left(k\\cdot\\theta\\right)\\ \\left\\{\\cos\\left(k\\theta\\right)>0\\right\\}",
         "polarDomain": {
           "min": "0",
           "max": "2\\pi"
@@ -188,10 +188,11 @@
         "type": "expression",
         "id": "20",
         "color": "#2d70b3",
-        "latex": "n=0.0375",
+        "latex": "n=0.03",
         "slider": {
           "hardMin": true,
           "animationPeriod": 40000,
+          "playDirection": -1,
           "isPlaying": true,
           "min": "0"
         }
