@@ -6,10 +6,53 @@ body {
     line-height: 1.6;
 }
 
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin: 24px 0 40px;
+}
+
+.graph-card {
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 16px;
+    background: white;
+}
+
+.graph-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.graph-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.graph-card p {
+    margin-bottom: 0;
+    color: #555;
+}
+
+.preview-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.preview-image:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
 #calculator {
     width:  100%;
     max-width: 1000px;
     height: 650px;
     margin: 30px 0;
-    border: 1px solid #ddd
+    border: 1px solid #ddd;
 }
