@@ -11,6 +11,26 @@
     <body>
         <h1>Slicing an Infinite Double Cone with a Plane to Get Conic Sections</h1>
 
+        <p>
+            This visualization shows how conic sections arise from slicing an infinite double cone with a plane.
+            When the slicing plane is horizontal, the intersection is a circle. When the plane is tilted moderately,
+            it cuts only one nappe of the cone, producing an ellipse. At the critical angle where the plane is
+            parallel to the side of the cone, the intersection becomes a parabola. When the plane is tilted even
+            more steeply and intersects both nappes of the cone, the result is a hyperbola.
+        </p>
+
+        <p>
+            <strong>Degenerate conics</strong> appear when the slicing plane passes through the origin. In this visualization,
+            this happens when <code>x_shift = 0</code> and <code>z_shift = 0</code>. A circle or ellipse collapses to a
+            single point at the origin, represented by <code>x² + y² = 0</code>. A parabola degenerates into a line, such as
+            <code>x² = 0y</code>. A hyperbola degenerates into a pair of intersecting lines, such as <code>x² - y² = 0</code>.
+        </p>
+
+        <p>
+            For those of you with elite 603 ball knowledge, the eccentricity is
+            <code>e = cos(θ) / cos(β)</code>.
+        </p>
+
         <div id="calculator"></div>
 
         <p>
