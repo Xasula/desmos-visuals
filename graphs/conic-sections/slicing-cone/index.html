@@ -46,7 +46,7 @@
                 zoomButtons:  true
             });
 
-            fetch("slicing-cone-desmos-state.json")
+            fetch("desmos-state.json")
                 .then(response => response.json())
                 .then(state => {calculator.setState(state)})
                 .catch(error => {console.error("Error loading Desmos state:", error);});
