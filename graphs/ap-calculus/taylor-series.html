@@ -11,6 +11,55 @@
     <body>
         <h1>Taylor Series Expansions</h1>
 
+        <p>
+            This visualization shows how a Taylor polynomial <code>T(x)</code> (in purple) approximates
+            a function <code>f(x)</code> (in orange).
+        </p>
+
+        <p>
+            The Taylor expansion centered at <code>x = c</code> begins like this:
+        </p>
+        <p>
+            <code>
+                T(x) = f(c) + f'(c)(x - c) + f''(c)(x - c)<sup>2</sup>/2! + f'''(c)(x - c)<sup>3</sup>/3! + ...
+            </code>
+        </p>
+
+        <p>
+            The slider <code>n</code> controls how many terms of this expansion are inclued. When
+            <code>n = 1</code>, <code>T<sub>1</sub>(x) = f(c) + f'(c)(x - c)</code> is just the linear
+            approximation. As <code>n</code> increases, the approximation uses more derivative information,
+            so the purple curve usually matches the orange curve more closely near <code>x = c</code>.
+        </p>
+
+        <p>
+            The point <code>(c, f(c))</code> is the center of the approximation. The Taylor polynomial is
+            built to match <code>f(x)</code> and its derivatives at this point, so the approximation is
+            usually best near <code>x = c</code> and may become less accurate farther away.
+        </p>
+
+        <p>
+            THe error function <code>R(x) = |T(x) - f(x)|</code> gives the actual error of the
+            Taylor approximation at a given location <code>x</code>. A smaller value of <code>R(x)</code>
+            means the purple curve of <code>T(x)</code> has a smaller vertical distance to the orange curve
+            of <code>f(x)</code> at <code>x</code>.
+        </p>
+
+        <p>
+            The Lagrange Error Bound gives a guaranteed upper bound for the error <code>R(x)</code>.
+            For a degree <code>n</code> Taylor polynomial centered at <code>x = c</code>, the bound is
+        </p>
+        <p>
+            <code>
+                R(x) ≤ M |x - c|<sup>n+1</sup> / (n + 1)!
+            </code>,
+        </p>
+
+        <p>
+            where <code>M</code> is the upper bound for the absolute value of the <code>n+1</code>th
+            derivative of <code>f</code> between <code>c</code> and the chosen <code>x</code>-value.
+        </p>
+
         <div id="calculator"></div>
 
         <p>
@@ -18,9 +67,9 @@
         </p>
         
         <script>
-            const elt = document.getElementById("calculator");
+            const element = document.getElementById("calculator");
 
-            const calculator = Desmos.GraphingCalculator(elt, {
+            const calculator = Desmos.GraphingCalculator(element, {
                 expressions:  true,
                 settingsMenu: true,
                 zoomButtons:  true
