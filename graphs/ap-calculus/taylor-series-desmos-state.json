@@ -178,7 +178,8 @@
         "id": "40",
         "folderId": "38",
         "color": "#2d70b3",
-        "latex": "L\\left(x\\right)=\\frac{M}{\\left(n+1\\right)!}\\left|x-c\\right|^{n+1}"
+        "latex": "L\\left(x\\right)=\\frac{M}{\\left(n+1\\right)!}\\left|x-c\\right|^{n+1}",
+        "hidden": true
       },
       {
         "type": "expression",
