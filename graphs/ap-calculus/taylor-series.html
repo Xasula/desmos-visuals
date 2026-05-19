@@ -25,8 +25,10 @@
             </code>
         </p>
 
+        <h2>Degree and Center of Approximation</h2>
+
         <p>
-            The slider <code>n</code> controls how many terms of this expansion are inclued. When
+            The slider <code>n</code> controls how many terms of this expansion are included. When
             <code>n = 1</code>, <code>T<sub>1</sub>(x) = f(c) + f'(c)(x - c)</code> is just the linear
             approximation. As <code>n</code> increases, the approximation uses more derivative information,
             so the purple curve usually matches the orange curve more closely near <code>x = c</code>.
@@ -38,26 +40,34 @@
             usually best near <code>x = c</code> and may become less accurate farther away.
         </p>
 
-        <p>
-            THe error function <code>R(x) = |T(x) - f(x)|</code> gives the actual error of the
-            Taylor approximation at a given location <code>x</code>. A smaller value of <code>R(x)</code>
-            means the purple curve of <code>T(x)</code> has a smaller vertical distance to the orange curve
-            of <code>f(x)</code> at <code>x</code>.
-        </p>
+        <h2>Error Function</h2>
 
         <p>
-            The Lagrange Error Bound gives a guaranteed upper bound for the error <code>R(x)</code>.
+            The remainder function <code>R(x) = f(x) - T(x)</code> tells us how much must be added to the
+            Taylor approximation to recover the original function. In other words, <code>f(x) = T(x) + R(x)</code>.
+        </p>
+        <p>
+            The size of the error is measured by <code>|R(x)|=|f(x) - T(x)|</code>. This tells us the vertical
+            distance between the orange function <code>f(x)</code> and the purple Taylor approximation
+            <code>T(x)</code> at a given location <code>x</code>.
+        </p>
+
+        <h2>Lagrange Error Bound</h2>
+
+        <p>
+            The Lagrange Error Bound gives a guaranteed upper bound for the error <code>|R(x)|</code>.
             For a degree <code>n</code> Taylor polynomial centered at <code>x = c</code>, the bound is
         </p>
         <p>
             <code>
-                R(x) ≤ M |x - c|<sup>n+1</sup> / (n + 1)!
+                |R(x)| &leq; M |x - c|<sup>n+1</sup> / (n + 1)!
             </code>,
         </p>
 
         <p>
-            where <code>M</code> is the upper bound for the absolute value of the <code>n+1</code>th
-            derivative of <code>f</code> between <code>c</code> and the chosen <code>x</code>-value.
+            where <code>M</code> is the upper bound for <code>|f<sup>(n+1)</sup>|</code>&mdash;the absolute
+            value of the <code>(n + 1)</code>th derivative of <code>f</code>&mdash;between <code>c</code>
+            and the chosen <code>x</code>-value.
         </p>
 
         <div id="calculator"></div>

@@ -27,7 +27,7 @@
         "type": "text",
         "id": "23",
         "folderId": "12",
-        "text": "Desmos doesn't support general derivatives, so we have to manually write out the derivatives as shown in D below."
+        "text": "Desmos doesn't support general derivatives, so we have to manually write out the derivatives (D) as shown below."
       },
       {
         "type": "expression",
@@ -105,6 +105,7 @@
           "hardMin": true,
           "hardMax": true,
           "min": "1",
+          "max": "10",
           "step": "1"
         },
         "fillOpacity": "0.4"
@@ -126,15 +127,27 @@
         "id": "31",
         "folderId": "37",
         "color": "#c74440",
-        "latex": "R\\left(x\\right)=\\left|T\\left(x\\right)-f\\left(x\\right)\\right|",
+        "latex": "R\\left(x\\right)=f\\left(x\\right)-T\\left(x\\right)",
         "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "33",
+        "folderId": "37",
+        "color": "#000000",
+        "latex": "x_0=0.25",
+        "slider": {
+          "min": "-0.9",
+          "max": "2",
+          "step": "0.01"
+        }
       },
       {
         "type": "expression",
         "id": "32",
         "folderId": "37",
         "color": "#2d70b3",
-        "latex": "R\\left(0.25\\right)"
+        "latex": "\\left|R\\left(x_0\\right)\\right|"
       },
       {
         "type": "folder",
@@ -146,14 +159,19 @@
         "type": "text",
         "id": "43",
         "folderId": "38",
-        "text": "M is the maximum absolute value of the nth derivative of f between x and c"
+        "text": "Choose M manually. M is an upper bound for the absolute value of the (n+1)th derivative of f between c and x_0. If M is too small, L(x_0) is not guaranteed to bound the error."
       },
       {
         "type": "expression",
         "id": "39",
         "folderId": "38",
         "color": "#c74440",
-        "latex": "M=?"
+        "latex": "M=1",
+        "slider": {
+          "hardMin": true,
+          "min": "0",
+          "step": "0.1"
+        }
       },
       {
         "type": "expression",
@@ -167,7 +185,7 @@
         "id": "41",
         "folderId": "38",
         "color": "#388c46",
-        "latex": "L\\left(0.25\\right)"
+        "latex": "L\\left(x_0\\right)"
       }
     ]
   },
