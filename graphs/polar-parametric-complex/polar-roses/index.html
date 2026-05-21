@@ -29,6 +29,8 @@
             In this visualization, those parts are shown in red.
         </p>
 
+        <!-- Add the Desmos for a=cos n\theta over here -->
+
         <p>
             When <code>cos(nθ) &lt; 0</code>, the radius <code>r</code> is negative. A negative radius means the point is plotted in the opposite direction,
             shifted by <code>π</code> radians. In this visualization, those parts are shown in blue.
@@ -56,7 +58,7 @@
                 zoomButtons:  true
             });
 
-            fetch("desmos-state.json")
+            fetch("desmos-state-transitions.json")
                 .then(response => response.json())
                 .then(state => {calculator.setState(state)})
                 .catch(error => {console.error("Error loading Desmos state:", error);});
