@@ -29,7 +29,7 @@
             In this visualization, those parts are shown in red.
         </p>
 
-        <!-- Add the Desmos for a=cos n\theta over here -->
+        <div id="calculator-graphing" class="calculator"></div>
 
         <p>
             When <code>cos(nθ) &lt; 0</code>, the radius <code>r</code> is negative. A negative radius means the point is plotted in the opposite direction,
@@ -43,25 +43,30 @@
             so the graph shows <code>2n</code> distinct petals.
         </p>
 
-        <div id="calculator"></div>
+        <div id="calculator-transitions" class="calculator"></div>
 
         <p>
             <a href="../../../index.html">← Back to gallery</a>
         </p>
 
         <script>
-            const element = document.getElementById("calculator");
+            function loadDesmosCalculator(elementId, stateFile) {
+                const element = document.getElementById(elementId);
 
-            const calculator = Desmos.GraphingCalculator(element, {
-                expressions:  true,
-                settingsMenu: true,
-                zoomButtons:  true
-            });
+                const calculator = Desmos.GraphingCalculator(element, {
+                    expressions:  true,
+                    settingsMenu: true,
+                    zoomButtons:  true
+                });
 
-            fetch("desmos-state-transitions.json")
-                .then(response => response.json())
-                .then(state => {calculator.setState(state)})
-                .catch(error => {console.error("Error loading Desmos state:", error);});
+                fetch(stateFile)
+                    .then(response => response.json())
+                    .then(state => {calculator.setState(state)})
+                    .catch(error => {console.error("Error loading Desmos state:", error);});
+            }
+
+            loadDesmosCalculator("calculator-graphing", "desmos-state-graphing.json");
+            loadDesmosCalculator("calculator-transitions", "desmos-state-transitions.json");
         </script>
     </body>
 </html>

@@ -49,7 +49,8 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-#calculator {
+#calculator,
+.calculator {
     width:  100%;
     max-width: 1000px;
     height: 650px;
