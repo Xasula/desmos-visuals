@@ -1,0 +1,212 @@
+{
+  "version": 11,
+  "randomSeed": "23381d199bdbe69ced4e5d6136a52929",
+  "graph": {
+    "viewport": {
+      "xmin": -8.97928163011065,
+      "ymin": -8.97928163011065,
+      "zmin": -8.97928163011065,
+      "xmax": 8.97928163011065,
+      "ymax": 8.97928163011065,
+      "zmax": 8.97928163011065
+    },
+    "worldRotation3D": [
+      -0.5689430526202656,
+      -0.7709975023915994,
+      -0.28612349463308906,
+      0.6887992823138588,
+      -0.6368381672810743,
+      0.3463996209264628,
+      -0.44928760450189215,
+      -7.085127564526911e-17,
+      0.8933871772311006
+    ],
+    "axis3D": [
+      0,
+      0,
+      1.0000000000064633
+    ],
+    "perspectiveDistortion": 0.9,
+    "showPlane3D": false,
+    "product": "graphing-3d",
+    "threeDMode": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-8.97928163011065",
+      "xmax": "8.97928163011065",
+      "ymin": "-8.97928163011065",
+      "ymax": "8.97928163011065",
+      "zmin": "-8.97928163011065",
+      "zmax": "8.97928163011065"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "text",
+        "id": "33",
+        "text": "Any two-variable function f(x,y) of choice"
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#50a0b3",
+        "latex": "f\\left(x,\\ y\\right)=\\left(\\sin x\\right)\\left(\\cos y\\right)\\ ",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "53",
+        "text": "The surface is intentionally sliced at x=a"
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "color": "#50a0b3",
+        "latex": "z=f\\left(x,\\ y\\right)\\ \\left\\{x\\le a\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "35",
+        "text": "A certain input (a, b) for the function"
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "color": "#388c46",
+        "latex": "a=1.2",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "9",
+        "color": "#6042a6",
+        "latex": "b=-6",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "loopMode": "LOOP_FORWARD",
+          "isPlaying": true,
+          "min": "-9",
+          "max": "9"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "color": "#000000",
+        "latex": "P=\\left(a,\\ b,\\ f\\left(a,\\ b\\right)\\right)",
+        "pointSize": "5",
+        "movablePointSize": "5"
+      },
+      {
+        "type": "folder",
+        "id": "40",
+        "title": "Slicing about the plane x=a",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "38",
+        "folderId": "40",
+        "color": "#aaaaaa",
+        "latex": "x=a",
+        "hidden": true,
+        "extendTo3D": true,
+        "fillOpacity": "0.2"
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "folderId": "40",
+        "color": "#fa7e19",
+        "latex": "z=f\\left(x,\\ y\\right)\\ \\left\\{x=a\\right\\}"
+      },
+      {
+        "type": "text",
+        "id": "46",
+        "text": "Value of ∂f/∂y when x=a and y=b"
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "color": "#c74440",
+        "latex": "f_{y}\\left(a,\\ b\\right)"
+      },
+      {
+        "type": "text",
+        "id": "51",
+        "text": "In general, ∂f/∂y is as shown below:"
+      },
+      {
+        "type": "expression",
+        "id": "13",
+        "color": "#388c46",
+        "latex": "f_{y}\\left(x,\\ y\\right)=\\frac{d}{dy}f\\left(x,\\ y\\right)",
+        "hidden": true
+      },
+      {
+        "type": "folder",
+        "id": "22",
+        "title": "Vectors showing ∂f/∂y",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "49",
+        "folderId": "22",
+        "text": "Adjust the length of the vectors... the value of Δy is arbitrary here"
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "folderId": "22",
+        "color": "#6042a6",
+        "latex": "\\Delta_{y}=2.47",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "24",
+        "folderId": "22",
+        "text": "Purely Δy vector"
+      },
+      {
+        "type": "expression",
+        "id": "18",
+        "folderId": "22",
+        "color": "#388c46",
+        "latex": "\\operatorname{vector}\\left(P,\\ P+\\Delta_{y}\\left(0,\\ 1,\\ 0\\right)\\right)"
+      },
+      {
+        "type": "text",
+        "id": "26",
+        "folderId": "22",
+        "text": "Tangent direction: Δz ≈ f_y(a,b) Δy"
+      },
+      {
+        "type": "expression",
+        "id": "20",
+        "folderId": "22",
+        "color": "#c74440",
+        "latex": "\\operatorname{vector}\\left(P+\\Delta_{y}\\left(0,\\ 1,\\ 0\\right),\\ P+\\Delta_{y}\\left(0,\\ 1,\\ f_{y}\\left(a,\\ b\\right)\\right)\\right)"
+      },
+      {
+        "type": "text",
+        "id": "30",
+        "folderId": "22",
+        "text": "Encodes slope of Δz / Δy"
+      },
+      {
+        "type": "expression",
+        "id": "11",
+        "folderId": "22",
+        "color": "#6042a6",
+        "latex": "\\operatorname{vector}\\left(P,\\ P+\\Delta_{y}\\left(0,\\ 1,\\ f_{y}\\left(a,\\ b\\right)\\right)\\right)"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrate3dLineWidthZero": true,
+  "doNotMigrateMovablePointStyle": true
+}
