@@ -1,0 +1,219 @@
+{
+  "version": 11,
+  "randomSeed": "8e719e25e140da450be2a9115c1e7335",
+  "graph": {
+    "viewport": {
+      "xmin": -11.250911478401214,
+      "ymin": -12.639288408052762,
+      "xmax": 21.232490420824995,
+      "ymax": 11.756008381184662
+    },
+    "polarMode": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-11.250911478401214",
+      "xmax": "21.232490420824995",
+      "ymin": "-12.639288408052762",
+      "ymax": "11.756008381184662"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "17",
+        "title": "Reference Curves / Lines",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "66",
+        "folderId": "17",
+        "text": "a: radius of the base circle"
+      },
+      {
+        "type": "expression",
+        "id": "12",
+        "folderId": "17",
+        "color": "#6042a6",
+        "latex": "r=a",
+        "lineStyle": "DASHED",
+        "polarDomain": {
+          "min": "",
+          "max": "2\\pi"
+        }
+      },
+      {
+        "type": "text",
+        "id": "69",
+        "folderId": "17",
+        "text": "Reference line for the current θ direction\n - Red: positive side (r ≥ 0)\n - Blue: negative side (r < 0)"
+      },
+      {
+        "type": "expression",
+        "id": "16",
+        "folderId": "17",
+        "color": "#c74440",
+        "latex": "y=x\\tan t\\ \\left\\{x\\cos t>0\\right\\}\\left\\{y\\sin t>0\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "67",
+        "folderId": "17",
+        "color": "#2d70b3",
+        "latex": "y=x\\tan t\\ \\left\\{x\\cos t<0\\right\\}\\left\\{y\\sin t<0\\right\\}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "text",
+        "id": "21",
+        "folderId": "17",
+        "text": "Red: parts where r ≥ 0\nBlue: parts where r < 0"
+      },
+      {
+        "type": "expression",
+        "id": "36",
+        "folderId": "17",
+        "color": "#6042a6",
+        "latex": "f\\left(\\theta\\right)=a+b\\cos\\theta",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "19",
+        "folderId": "17",
+        "color": "#2d70b3",
+        "latex": "r=f\\left(\\theta\\right)\\ \\left\\{f\\left(\\theta\\right)<0\\right\\}",
+        "polarDomain": {
+          "min": "",
+          "max": "t"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "1",
+        "folderId": "17",
+        "color": "#c74440",
+        "latex": "r=f\\left(\\theta\\right)\\ \\left\\{f\\left(\\theta\\right)\\ge0\\right\\}",
+        "polarDomain": {
+          "min": "",
+          "max": "t"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "39",
+        "title": "Reference Values",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "78",
+        "folderId": "39",
+        "text": "Values of a and b cos(θ) displayed separately, rounded to two decimal places"
+      },
+      {
+        "type": "expression",
+        "id": "74",
+        "folderId": "39",
+        "color": "#c74440",
+        "latex": "c_{osineCurrentValue}=\\operatorname{round}\\left(b\\cos t,\\ 2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "76",
+        "folderId": "39",
+        "color": "#388c46",
+        "latex": "f\\left(t\\right)\\cdot\\left(\\cos t,\\ \\sin t\\right)",
+        "showLabel": true,
+        "label": "r=(${a})+(${c_osineCurrentValue})",
+        "labelSize": "1.3"
+      },
+      {
+        "type": "text",
+        "id": "33",
+        "folderId": "39",
+        "text": "Value of a + b cos(θ) at the current angle θ=t, rounded to two decimal places"
+      },
+      {
+        "type": "expression",
+        "id": "37",
+        "folderId": "39",
+        "color": "#000000",
+        "latex": "r_{currentValue}=\\operatorname{round}\\left(f\\left(t\\right),\\ 2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "35",
+        "folderId": "39",
+        "color": "#c74440",
+        "latex": "f\\left(t\\right)\\cdot\\left(\\cos t,\\ \\sin t\\right)",
+        "showLabel": true,
+        "label": "r=(${r_currentValue})",
+        "labelSize": "1.1"
+      },
+      {
+        "type": "text",
+        "id": "41",
+        "folderId": "39",
+        "text": "Current θ value, rounded to two decimal places"
+      },
+      {
+        "type": "expression",
+        "id": "43",
+        "folderId": "39",
+        "color": "#6042a6",
+        "latex": "\\theta_{currentValue}=\\operatorname{round}\\left(t,\\ 2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "42",
+        "folderId": "39",
+        "color": "#000000",
+        "latex": "\\left|a\\right|\\left(\\cos t,\\ \\sin t\\right)",
+        "showLabel": true,
+        "label": "θ=${\\theta_currentValue}"
+      },
+      {
+        "type": "expression",
+        "id": "10",
+        "color": "#000000",
+        "latex": "a=6",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "11",
+        "color": "#c74440",
+        "latex": "b=8",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "min": "0"
+        }
+      },
+      {
+        "type": "text",
+        "id": "73",
+        "text": "Press Play for t to see how the limaçon is drawn.\nvvvvvvvvvvvvvvvvvvvvvv"
+      },
+      {
+        "type": "expression",
+        "id": "13",
+        "color": "#388c46",
+        "latex": "t=6.283185307179586",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 20000,
+          "loopMode": "PLAY_ONCE",
+          "isPlaying": true,
+          "min": "0",
+          "max": "2\\pi"
+        }
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Limaçon Visualizer</title>
+        <link rel="stylesheet" href="../../../style.css">
+
+        <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=c8a09e8f7af44edcaa08fdf5892c43b4"></script>
+    </head>
+
+    <body>
+        <h1>Limaçon Visualizer</h1>
+
+        <h2>Overview</h2>
+
+        <p>
+            This visualization shows how the polar curve <code>r = a + b cos(&theta;)</code>
+            is drawn. As <code>&theta;</code> increases from <code>0</code> to <code>2&pi;</code>,
+            the radius <code>r</code> changes depending on the value of <code>a + b cos(&theta;)</code>.
+        </p>
+
+        <p>
+            The purple reference circle <code>r = a</code> shows the constant-radius
+            part of the formula. The limaçon is formed by adding the changing term
+            <code>b cos(&theta;)</code> to this base radius. When <code>b cos(&theta;) &gt; 0</code>,
+            <code>r</code> becomes larger than <code>a</code>. When <code>b cos(&theta;) &lt; 0</code>,
+            <code>r</code> becomes smaller than <code>a</code>.
+        </p>
+
+        <h2>Positive and Negative Radius</h2>
+
+        <p>
+            In polar coordinates, a positive radius means the point is plotted in the
+            usual direction of <code>&theta;</code>. In this visualization, those parts are
+            shown in red.
+        </p>
+
+        <p>
+            A negative radius means the point is plotted in the opposite direction,
+            shifted by <code>&pi;</code> radians. In this visualization, those parts are
+            shown in blue. These negative-radius parts are what create an inner loop
+            when the changing term is large enough.
+        </p>
+
+        <h2>How the Ratio <code>|a/b|</code> Changes the Shape</h2>
+
+        <p>
+            The shape of the limaçon depends on the ratio <code>|a/b|</code>. This
+            ratio compares the constant part <code>a</code> with the changing part
+            <code>b cos(&theta;)</code>. In the usual case where <code>ab &ne; 0</code>,
+            the size of this ratio determines which type of limaçon appears.
+        </p>
+
+        <h3><code>|a/b| &lt; 1</code>: Inner Loop Limaçon</h3>
+
+        <p>
+            <code>|a| &lt; |b|</code>. This means <code>b cos(&theta;)</code> is strong enough to
+            make <code>r = a + b cos(&theta;)</code> negative for some values of
+            <code>&theta;</code>. Since negative radius points are plotted in the opposite
+            direction, the curve forms an inner loop.
+        </p>
+
+        <h3><code>|a/b| = 1</code>: Cardioid</h3>
+
+        <p>
+            If <code>|a| = |b|</code>, then the smallest radius reaches exactly
+            <code>0</code>. The curve touches the pole but does not pass through it
+            to form an inner loop. This special limaçon is called a cardioid.
+        </p>
+
+        <h3><code>1 &lt; |a/b| &lt; 2</code>: Dimpled Limaçon</h3>
+
+        <p>
+            If <code>|b| &lt; |a| &lt; 2|b|</code>, then the radius never becomes
+            negative, so there is no inner loop. However, the changing term
+            <code>b cos(&theta;)</code> is still large enough to pull one side of the curve
+            inward, creating a dimple.
+        </p>
+
+        <h3><code>|a/b| &geq; 2</code>: Convex Limaçon</h3>
+
+        <p>
+            If <code>|a| &geq; 2|b|</code>, then the constant part <code>a</code>
+            dominates the changing term <code>b cos(&theta;)</code>. The curve is not
+            pulled inward enough to form a dimple, so the limaçon becomes convex.
+        </p>
+
+        <h2>Interactive Graph</h2>
+
+        <p>
+            The graph displays reference values for the current angle <code>&theta; = t</code>.
+            It shows the radius as <code>r = a + b cos(&theta;)</code>, with the two parts
+            displayed separately. It also labels the current value of <code>r</code>
+            and the current angle <code>&theta;</code>, rounded to two decimal places.
+        </p>
+
+        <p>
+            Press play on <code>t</code> to see the limaçon being traced. The red parts
+            show where <code>r &geq; 0</code>, and the blue parts show where
+            <code>r &lt; 0</code>.
+        </p>
+
+        <div id="calculator" class="calculator"></div>
+
+        <p>
+            <a href="../../../index.html">← Back to gallery</a>
+        </p>
+
+        <script>
+            const element = document.getElementById("calculator");
+
+            const calculator = Desmos.GraphingCalculator(element, {
+                expressions: true,
+                settingsMenu: true,
+                zoomButtons: true
+            });
+
+            fetch(stateFile)
+                    .then(response => response.json())
+                    .then(state => {calculator.setState(state)})
+                    .catch(error => {console.error("Error loading Desmos state:", error);});
+        </script>
+    </body>
+</html>
