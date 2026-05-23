@@ -132,24 +132,47 @@
         <h2>Finding the second derivative</h2>
 
         <p>
-            Since <code>x</code> and <code>y</code>o are both functions of <code>&theta;</code>,
-            the second derivative <code>d<sup>2</sup>x/dy<sup>2</sup></code> should be
+            Since <code>x</code> and <code>y</code> are both functions of <code>&theta;</code>,
+        </p>
+
+        <p class="formula">
+            <code>
+                dx/dy = (dx/d&theta;) / (dy/d&theta;).
+            </code>
+        </p>
+
+        <p>
+            To find the second derivative, we differentiate <code>dx/dy</code> with respect
+            to <code>y</code>:
         </p>
 
         <p class="formula">
             <code>
                 d<sup>2</sup>x/dy<sup>2</sup>
                 =
-                d/dy(dx/dy)
-                =
-                d/d&theta;[(dx/d&theta;) / (dy/d&theta;)]
-                &middot;
-                d&theta;/dy.
+                d/dy(dx/dy).
             </code>
         </p>
 
         <p>
-            Since <code>d&theta;/dy = 1/(dy/d&theta;)</code>, this becomes
+            Since <code>dy/d&theta;</code> is not constant, we have to differentiate the whole
+            fraction <code>(dx/d&theta;) / (dy/d&theta;)</code>. Using the quotient rule,
+        </p>
+
+        <p class="formula">
+            <code>
+                d/d&theta;[(dx/d&theta;) / (dy/d&theta;)]
+                =
+                ((d<sup>2</sup>x/d&theta;<sup>2</sup>)(dy/d&theta;)
+                -
+                (dx/d&theta;)(d<sup>2</sup>y/d&theta;<sup>2</sup>))
+                /
+                (dy/d&theta;)<sup>2</sup>.
+            </code>
+        </p>
+
+        <p>
+            Also, <code>d&theta;/dy = 1/(dy/d&theta;)</code>. Therefore,
         </p>
 
         <p class="formula">
@@ -165,17 +188,8 @@
         </p>
 
         <p>
-            Plugging in the expressions for <code>x(&theta;)</code> and <code>y(&theta;)</code>, we get
-        </p>
-
-        <p class="formula">
-            <code>d<sup>2</sup>x/d&theta;<sup>2</sup> = -a cos(&theta;) - 2b cos(2&theta;)</code>
-            <br>
-            <code>d<sup>2</sup>y/d&theta;<sup>2</sup> = -a sin(&theta;) - 2b sin(2&theta;).</code>
-        </p>
-
-        <p>
-            Substituting and simplifying gives
+            Plugging in the expressions for <code>dx/d&theta;</code> and
+            <code>dy/d&theta;</code> from above and simplifying, we get
         </p>
 
         <p class="formula">
@@ -191,17 +205,21 @@
         <h2>Claim 3: The second derivative is never negative exactly when <code>a/b &geq; 2</code></h2>
 
         <p>
-            We are interested in the no-inner-loop case, so assume <code>a &gt; b</code>.
-            On the left side,
-        </p>
-
-        <p class="formula">
-            <code>&pi;/2 &leq; &theta; &leq; 3&pi;/2.</code>
+            We do not want inner loops or cardioids, so assume <code>a &gt; b</code>.
         </p>
 
         <p>
-            In this interval, <code>dy/d&theta; = a cos(&theta;) + b cos(2&theta;)</code>
-            is negative, so
+            The curve that lies to the left of the <code>y</code>-axis is drawn when
+        </p>
+
+        <p class="formula">
+            <code>&pi;/2 &leq; &theta; &leq; 3&pi;/2</code>.
+        </p>
+
+        <p>
+            On this part of the curve, <code>dy/d&theta; &lt; 0</code>. In other words, as
+            <code>&theta;</code> increases, the left side of the limaçon is being drawn
+            downward. Therefore,
         </p>
 
         <p class="formula">
@@ -209,7 +227,8 @@
         </p>
 
         <p>
-            Therefore, <code>d<sup>2</sup>x/dy<sup>2</sup> &geq; 0</code> exactly when
+            Since the denominator is negative, the second derivative
+            <code>d<sup>2</sup>x/dy<sup>2</sup></code> is nonnegative exactly when
         </p>
 
         <p class="formula">
@@ -290,10 +309,6 @@
 
         <p class="formula">
             <code>|a/b| &geq; 2.</code>
-        </p>
-
-        <p>
-            <a href="../index.html">← Back to Limaçon Visualizer</a>
         </p>
        
         <p>
