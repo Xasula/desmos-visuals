@@ -5,7 +5,7 @@
         <title>Partial Derivative Slice Visualizer</title>
         <link rel="stylesheet" href="../../../style.css">
 
-        <script src="https://www.desmos.com/api/v1.13/calculator.js?apiKey=YOUR_API_KEY_HERE"></script>
+        <script src="https://www.desmos.com/api/v1.13/calculator.js?apiKey=c8a09e8f7af44edcaa08fdf5892c43b4"></script>
     </head>
 
     <body>
@@ -20,21 +20,21 @@
         <p>
             To understand <code>∂f/∂y</code>, we keep <code>x = a</code> fixed and
             only allow <code>y</code> to change. The orange curve is the slice of the
-            surface along the plane <code>x = a</code>, and the point
+            surface along the plane <code>x = a</code>, and the black point
             <code>P = (a, b, f(a,b))</code> is the point where the partial derivative
             is being measured.
         </p>
 
         <p>
-            The green vector shows a change in the <code>y</code>-direction. The red
-            vector shows the corresponding linearized change in height, using
-            <code>Δz ≈ f<sub>y</sub>(a,b)Δy</code>. Together, these form the purple
+            The green vector represents a small nudge <code>Δy</code> in the <code>y</code>-direction. The red
+            vector shows the corresponding change in height <code>Δf</code>, using
+            <code>Δf ≈ (∂f/∂y)(a,b)Δy</code>. Together, these form the purple
             tangent direction vector.
         </p>
 
         <p>
-            (Note: the value of <code>Δy</code> only changes the apparent length of the vectors. The
-            actual partial derivative <code>f<sub>y</sub>(a,b)</code> is the slope
+            (Note: the value of "<code>Δy</code>" only changes the apparent length of the vectors. The
+            actual partial derivative <code>(∂f/∂y)(a,b)</code> is the slope of the purple vector
             <code>Δz/Δy</code> in this tangent direction)
         </p>
 
@@ -48,9 +48,9 @@
             const element = document.getElementById("calculator");
 
             const calculator = Desmos.Calculator3D(element, {
-                expressions: true,
+                expressions:  true,
                 settingsMenu: true,
-                zoomButtons: true
+                zoomButtons:  true
             });
 
             fetch("desmos-state.json")
