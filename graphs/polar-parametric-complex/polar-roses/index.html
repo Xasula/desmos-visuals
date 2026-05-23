@@ -11,16 +11,14 @@
     <body>
         <h1>Polar Rose Petal Overlap Visualizer</h1>
 
+        <h2>Overview</h2>
+
         <p>
             This visualization shows how the petals of <code>r = cos(nθ)</code>
             behave for odd versus even values of <code>n</code>.
         </p>
 
-        <p>
-            If <code>n</code> is even, the rose curve has <code>2n</code> petals.
-            If <code>n</code> is odd, it has only <code>n</code> petals.
-            Why?
-        </p>
+        <h2>Positive and Negative <code>r</code> Values</h2>
 
         <p>
             The value of <code>cos(nθ)</code> oscillates between <code>1</code> and
@@ -29,11 +27,26 @@
             In this visualization, those parts are shown in red.
         </p>
 
-        <div id="calculator-graphing" class="calculator"></div>
+        <p>
+            When <code>cos(nθ) &lt; 0</code>, the radius <code>r</code> is negative. A negative radius
+            means the point is plotted in the opposite direction, shifted by <code>π</code> radians.
+            In this visualization, those parts are shown in blue.
+        </p>
 
         <p>
-            When <code>cos(nθ) &lt; 0</code>, the radius <code>r</code> is negative. A negative radius means the point is plotted in the opposite direction,
-            shifted by <code>π</code> radians. In this visualization, those parts are shown in blue.
+            The graph below shows how the rose curve is traced as <code>θ</code>
+            increases from <code>0</code> to <code>2&pi;</code>. The red parts correspond to positive radius values,
+            while the blue parts correspond to negative radius values.
+        </p>
+
+        <div id="calculator-graphing" class="calculator"></div>
+        
+        <h2>Why The Curve Behaves Differently for Odd vs. Even Values of <code>n</code></h2>
+        
+        <p>
+            If <code>n</code> is even, the rose curve has <code>2n</code> petals.
+            If <code>n</code> is odd, it has only <code>n</code> petals.
+            Why?
         </p>
 
         <p>
