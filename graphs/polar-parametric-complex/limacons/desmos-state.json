@@ -186,11 +186,7 @@
         "id": "11",
         "color": "#c74440",
         "latex": "b=8",
-        "hidden": true,
-        "slider": {
-          "hardMin": true,
-          "min": "0"
-        }
+        "hidden": true
       },
       {
         "type": "text",
