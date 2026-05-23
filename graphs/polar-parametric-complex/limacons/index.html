@@ -27,62 +27,19 @@
             <code>r</code> becomes smaller than <code>a</code>.
         </p>
 
-        <h2>Positive and Negative Radius</h2>
+        <h2>Positive and Negative <code>r</code></h2>
 
         <p>
-            In polar coordinates, a positive radius means the point is plotted in the
+            In polar coordinates, a positive <code>r</code> means the point is plotted in the
             usual direction of <code>&theta;</code>. In this visualization, those parts are
             shown in red.
         </p>
 
         <p>
-            A negative radius means the point is plotted in the opposite direction,
+            A negative <code>r</code> means the point is plotted in the opposite direction,
             shifted by <code>&pi;</code> radians. In this visualization, those parts are
-            shown in blue. These negative-radius parts are what create an inner loop
+            shown in blue. These negative-<code>r</code> parts are what create an inner loop
             when the changing term is large enough.
-        </p>
-
-        <h2>How the Ratio <code>|a/b|</code> Changes the Shape</h2>
-
-        <p>
-            The shape of the limaçon depends on the ratio <code>|a/b|</code>. This
-            ratio compares the constant part <code>a</code> with the changing part
-            <code>b cos(&theta;)</code>. In the usual case where <code>ab &ne; 0</code>,
-            the size of this ratio determines which type of limaçon appears.
-        </p>
-
-        <h3><code>|a/b| &lt; 1</code>: Inner Loop Limaçon</h3>
-
-        <p>
-            <code>|a| &lt; |b|</code>. This means <code>b cos(&theta;)</code> is strong enough to
-            make <code>r = a + b cos(&theta;)</code> negative for some values of
-            <code>&theta;</code>. Since negative radius points are plotted in the opposite
-            direction, the curve forms an inner loop.
-        </p>
-
-        <h3><code>|a/b| = 1</code>: Cardioid</h3>
-
-        <p>
-            If <code>|a| = |b|</code>, then the smallest radius reaches exactly
-            <code>0</code>. The curve touches the pole but does not pass through it
-            to form an inner loop. This special limaçon is called a cardioid.
-        </p>
-
-        <h3><code>1 &lt; |a/b| &lt; 2</code>: Dimpled Limaçon</h3>
-
-        <p>
-            If <code>|b| &lt; |a| &lt; 2|b|</code>, then the radius never becomes
-            negative, so there is no inner loop. However, the changing term
-            <code>b cos(&theta;)</code> is still large enough to pull one side of the curve
-            inward, creating a dimple.
-        </p>
-
-        <h3><code>|a/b| &geq; 2</code>: Convex Limaçon</h3>
-
-        <p>
-            If <code>|a| &geq; 2|b|</code>, then the constant part <code>a</code>
-            dominates the changing term <code>b cos(&theta;)</code>. The curve is not
-            pulled inward enough to form a dimple, so the limaçon becomes convex.
         </p>
 
         <h2>Interactive Graph</h2>
@@ -102,6 +59,54 @@
 
         <div id="calculator" class="calculator"></div>
 
+        <h2>How the Ratio <code>|a/b|</code> Changes the Shape</h2>
+
+        <p>
+            The shape of the limaçon depends on the ratio <code>|a/b|</code>. This
+            ratio compares the constant part <code>a</code> with the changing part
+            <code>b cos(&theta;)</code>. In the usual case where <code>ab &ne; 0</code>,
+            the size of this ratio determines which type of limaçon appears.
+        </p>
+
+        <h3><code>|a/b| &lt; 1</code>: Inner Loop Limaçon</h3>
+
+        <p>
+            <code>|a| &lt; |b|</code>. This means <code>b cos(&theta;)</code> is strong enough to
+            make <code>r = a + b cos(&theta;)</code> negative for some values of
+            <code>&theta;</code>. Since points with negative <code>r</code>-values are plotted in the opposite
+            direction, the curve forms an inner loop.
+        </p>
+
+        <h3><code>|a/b| = 1</code>: Cardioid</h3>
+
+        <p>
+            If <code>|a| = |b|</code>, then the smallest radius is exactly
+            <code>0</code>. The curve touches the pole but does not pass through it
+            to form an inner loop. This special limaçon is called a cardioid.
+        </p>
+
+        <h3><code>1 &lt; |a/b| &lt; 2</code>: Dimpled Limaçon</h3>
+
+        <p>
+            If <code>|b| &lt; |a| &lt; 2|b|</code>, then <code>r</code> never becomes
+            negative, so there is no inner loop. However, the changing term
+            <code>b cos(&theta;)</code> is still large enough to pull one side of the curve
+            inward, creating a dimple.
+        </p>
+
+        <h3><code>|a/b| &geq; 2</code>: Convex Limaçon</h3>
+
+        <p>
+            If <code>|a| &geq; 2|b|</code>, then the constant part <code>a</code>
+            dominates the changing term <code>b cos(&theta;)</code>. The curve is not
+            pulled inward enough to form a dimple, so the limaçon becomes convex.
+        </p>
+
+        <p>
+            If you are interested in where the <code>2</code> comes from,
+            check out <a href="convex-proof.html">this page</a>!
+        </p>
+
         <p>
             <a href="../../../index.html">← Back to gallery</a>
         </p>
@@ -115,7 +120,7 @@
                 zoomButtons: true
             });
 
-            fetch(stateFile)
+            fetch("desmos-state.json")
                     .then(response => response.json())
                     .then(state => {calculator.setState(state)})
                     .catch(error => {console.error("Error loading Desmos state:", error);});

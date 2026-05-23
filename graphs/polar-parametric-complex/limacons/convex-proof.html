@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Why Limaçons Are Convex When |a/b| ≥ 2</title>
+        <link rel="stylesheet" href="../../../../style.css">
+    </head>
+
+    <body>
+        <h1>Why Limaçons Are Convex When <code>|a/b| &geq; 2</code></h1>
+
+        <h2>Goal</h2>
+
+        <p>
+            We want to explain why the limaçon
+            <code>r = a + b cos(&theta;)</code>
+            becomes convex when <code>|a/b| &geq; 2</code>.
+        </p>
+
+        <p>
+            Intuitively, this condition means that the constant part
+            <code>a</code> is large enough compared to the changing part
+            <code>b cos(&theta;)</code>. The changing part can still stretch the
+            curve, but it is not strong enough to pull the curve inward and create
+            a dimple.
+        </p>
+
+        <h2>Note: We can assume <code>a &gt; 0</code> and <code>b &gt; 0</code></h2>
+
+        <p>
+            The signs of <code>a</code> and <code>b</code> mainly affect the orientation
+            of the graph. Changing signs can rotate or reflect the limaçon, but rotations
+            and reflections do not change whether a curve is convex.
+        </p>
+
+        <p>
+            Thus, to understand the shape, it is enough to prove the result in the standard
+            case where
+        </p>
+
+        <p class="formula">
+            <code>a &gt; 0, &nbsp; b &gt; 0, &nbsp; and &nbsp; a/b &geq; 2.</code>
+        </p>
+
+        <p>
+            At the end, this becomes the usual absolute-value condition
+            <code>|a/b| &geq; 2</code>.
+        </p>
+
+        <h2>Claim 1: <code>r</code> never becomes negative</h2>
+
+        <p>
+            Since <code>cos(&theta;)</code> is always between <code>-1</code> and
+            <code>1</code>, the smallest possible value of
+            <code>r = a + b cos(&theta;)</code> occurs when
+            <code>cos(&theta;) = -1</code>.
+        </p>
+
+        <p class="formula">
+            <code>r<sub>min</sub> = a + b(-1) = a - b.</code>
+        </p>
+
+        <p>
+            If <code>a/b &geq; 2</code>, then <code>a &geq; 2b</code>. Therefore,
+        </p>
+
+        <p class="formula">
+            <code>r<sub>min</sub> = a - b &geq; 2b - b = b &gt; 0,</code>
+        </p>
+
+        <p>
+            meaning <code>r</code> is always positive. The curve never crosses
+            through the pole (<code>r &lt; 0</code>) to form an inner loop.
+        </p>
+
+       
+        <p>
+            <a href="index.html">← Back to Limaçon Visualizer</a>
+        </p>
+    </body>
+</html>
