@@ -182,7 +182,11 @@
         "id": "8",
         "color": "#c74440",
         "latex": "a=1",
-        "hidden": true
+        "hidden": true,
+        "slider": {
+            "hardMin": true,
+            "min": "0"
+        }
       },
       {
         "type": "expression",
