@@ -147,7 +147,7 @@
         "id": "42",
         "folderId": "39",
         "color": "#000000",
-        "latex": "\\left(\\cos t,\\ \\sin t\\right)",
+        "latex": "a\\left(\\cos t,\\ \\sin t\\right)",
         "showLabel": true,
         "label": "θ=(${\\theta_currentValue})"
       },
