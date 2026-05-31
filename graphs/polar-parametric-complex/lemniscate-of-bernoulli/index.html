@@ -11,27 +11,70 @@
     <body>
         <h1>Lemniscate of Bernoulli Visualizer</h1>
 
+        <h2>Overview</h2>
 
+        <p>
+            This visualization explores the Lemniscate of Bernoulli given by
+            the polar equation <code>r = a sqrt(cos 2&theta;)</code>.
+        </p>
+
+        <p>
+            Because the expression under the square root must be nonnegative,
+            the curve only exists where <code>cos 2&theta; &geq; 0</code>.
+            The black dotted boundaries show where <code>cos 2&theta; = 0</code>.
+            Near those boundaries, the curve becomes nearly tangent to boundary directions.
+        </p>
+
+        <h2>Interactive Graph</h2>
+
+        <p>
+            Press play on <code>t</code> to watch the lemniscate be drawn. The reference line
+            shows the current direction of <code>&theta;</code>.
+        </p>
         
-        <div id="calculator" class="calculator"></div>
+        <div id="calculator-lemniscate" class="calculator"></div>
+
+        <h2>Why the Curve Nearly Aligns with the Boundary</h2>
+
+        <p>
+            The graph below shows <code>y = sqrt(x)</code> near the origin. The graph of <code>y = sqrt(x)</code>
+            is the upper half of the sideways parabola <code>x = y<sup>2</sup></code>. Its vertex is at the origin,
+            and near that vertex the curve has a vertical tangent. So when we zoom into the origin,
+            the curve becomes almost indistinguishable from the vertical line <code>x = 0</code>.
+        </p>
+
+        <p>
+            The lemniscate <code>a sqrt(cos 2&theta;)</code> has a similar square-root behavior near the dotted
+            boundary lines. If we think of <code>u = cos 2&theta;</code>, then the boundaries occur when
+            <code>u = 0</code>. When <code>u &approx; 0</code>, the expression <code>r = a sqrt(u)</code>
+            behaves like <code>y = sqrt(x)</code> near <code>x = 0</code>. The lemniscate nearly aligns
+            with the boundary direction.
+        </p>
+
+        <div id="calculator-square-root" class="calculator"></div>
 
         <p>
             <a href="../../../index.html">← Back to gallery</a>
         </p>
 
         <script>
-            const element = document.getElementById("calculator");
+            function loadDesmosCalculator(elementId, stateFile) {
+                const element = document.getElementById(elementId);
 
-            const calculator = Desmos.GraphingCalculator(element, {
-                expressions: true,
-                settingsMenu: true,
-                zoomButtons: true
-            });
+                const calculator = Desmos.GraphingCalculator(element, {
+                    expressions:  true,
+                    settingsMenu: true,
+                    zoomButtons:  true
+                });
 
-            fetch("desmos-state.json")
+                fetch(stateFile)
                     .then(response => response.json())
                     .then(state => {calculator.setState(state)})
                     .catch(error => {console.error("Error loading Desmos state:", error);});
+            }
+
+            loadDesmosCalculator("calculator-lemniscate", "desmos-state-lemniscate.json");
+            loadDesmosCalculator("calculator-square-root", "desmos-state-square-root.json");
         </script>
     </body>
 </html>

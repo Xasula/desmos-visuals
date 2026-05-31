@@ -1,0 +1,68 @@
+{
+  "version": 11,
+  "randomSeed": "c61604acd142875768bf5036ae30bebb",
+  "graph": {
+    "viewport": {
+      "xmin": -6.775286442790027,
+      "ymin": -10.501542617101066,
+      "xmax": 33.1089145663146,
+      "ymax": 19.45177774740737
+    },
+    "squareAxes": true,
+    "__v12ViewportLatexStash": {
+      "xmin": "-0.8952\\cdot2^{z_{oom}}",
+      "xmax": "4.37459\\cdot2^{z_{oom}}",
+      "ymin": "-1.38754\\cdot2^{z_{oom}}",
+      "ymax": "2.57011\\cdot2^{z_{oom}}"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#c74440",
+        "latex": "y=\\sqrt{x}"
+      },
+      {
+        "type": "text",
+        "id": "10",
+        "text": "As we zoom into the origin, y = √x becomes almost indistinguishable from the vertical line x=0."
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "color": "#000000",
+        "latex": "x=0",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "color": "#000000",
+        "latex": "\\left(0,\\ 0\\right)",
+        "showLabel": true,
+        "label": "Origin",
+        "pointSize": "15",
+        "movablePointSize": "15"
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "color": "#388c46",
+        "latex": "z_{oom}=2.904",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 11428.57142857143,
+          "playDirection": -1,
+          "isPlaying": true,
+          "min": "-8",
+          "max": "3"
+        }
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}
