@@ -1,0 +1,80 @@
+{
+  "version": 11,
+  "randomSeed": "82cbc985463fdbc75d4e36efb2417c84",
+  "graph": {
+    "viewport": {
+      "xmin": -12.265533178650763,
+      "ymin": -10.745798871511008,
+      "xmax": 20.21786872057524,
+      "ymax": 13.649497917726327
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-12.265533178650763",
+      "xmax": "20.21786872057524",
+      "ymin": "-10.745798871511008",
+      "ymax": "13.649497917726327"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#c74440",
+        "latex": "r=a+b\\cos\\theta",
+        "polarDomain": {
+          "min": "-\\frac{\\pi}{2}",
+          "max": "\\theta_{current}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "color": "#000000",
+        "latex": "\\theta_{current}=3.43",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "loopMode": "LOOP_FORWARD",
+          "isPlaying": true,
+          "min": "\\frac{\\pi}{2}",
+          "max": "\\frac{3\\pi}{2}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "2",
+        "color": "#2d70b3",
+        "latex": "a=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "8",
+          "max": "8"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "color": "#388c46",
+        "latex": "b=4",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0",
+          "max": "8"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#6042a6"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

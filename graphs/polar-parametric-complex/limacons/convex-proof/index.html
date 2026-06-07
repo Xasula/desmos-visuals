@@ -288,7 +288,7 @@
                     (dy/d&theta;)<sup>3</sup>.
                 </code>
             </p>
-
+        
             <p>
                 Plugging in the expressions for <code>dx/d&theta;</code> and
                 <code>dy/d&theta;</code> and simplifying gives
@@ -323,13 +323,23 @@
                 downward. Therefore,
             </p>
 
+            <div class="desmos-card">
+                <div id="calculator-going-down" class="desmos-calculator"></div>
+                <p class="caption">
+                    Note that when the current &theta; value increases from
+                    &pi;/2 to 3&pi;/2, the curve is drawn downward.
+                    Therefore, dy/d&theta; must be negative.
+                </p>
+            </div>
+
             <p class="formula">
                 <code>(dy/d&theta;)<sup>3</sup> &lt; 0.</code>
             </p>
 
             <p>
-                Because the denominator is negative, the second derivative
-                <code>d<sup>2</sup>x/dy<sup>2</sup></code> is nonnegative if and only if
+                Because the denominator (dy/d&theta;)<sup>3</sup> of <code>d<sup>2</sup>x/dy<sup>2</sup></code>
+                is negative, the second derivative <code>d<sup>2</sup>x/dy<sup>2</sup></code>
+                is nonnegative if and only if
             </p>
 
             <p class="formula">
@@ -442,6 +452,7 @@
 
             loadDesmosCalculator("calculator-pushing-right", "desmos-state-pushing-right.json");
             loadDesmosCalculator("calculator-second-derivative", "desmos-state-second-derivative.json");
+            loadDesmosCalculator("calculator-going-down", "desmos-state-going-down.json")
         </script>
     </body>
 </html>
