@@ -175,7 +175,7 @@
             </p>
 
             <div class="desmos-card">
-                <div id="pushing-right-calculator" class="desmos-calculator"></div>
+                <div id="calculator-pushing-right" class="desmos-calculator"></div>
                 <p class="caption">
                     What you should notice: as <code>b</code> increases, the
                     <code>b cos(&theta;)</code> term pulls the left side inward while
@@ -225,7 +225,7 @@
             </p>
 
             <div class="desmos-card">
-                <div id="second-derivative-calculator" class="desmos-calculator"></div>
+                <div id="calculator-second-derivative" class="desmos-calculator"></div>
                 <p class="caption">
                     Try changing <code>b</code>. The blue parabola shows the local
                     curvature at the leftmost point (<code>&theta; = &pi;</code>). The sign
@@ -440,8 +440,8 @@
                     .catch(error => {console.error("Error loading Desmos state:", error);});
             }
 
-            loadDesmosCalculator("calculator-lemniscate", "desmos-state-lemniscate.json");
-            loadDesmosCalculator("calculator-square-root", "desmos-state-square-root.json");
+            loadDesmosCalculator("calculator-pushing-right", "desmos-state-pushing-right.json");
+            loadDesmosCalculator("calculator-second-derivative", "desmos-state-second-derivative.json");
         </script>
     </body>
 </html>
