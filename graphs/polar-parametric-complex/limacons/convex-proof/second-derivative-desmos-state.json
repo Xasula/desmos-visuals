@@ -1,0 +1,129 @@
+{
+  "version": 11,
+  "randomSeed": "757f09652deaae6d46214c1ae6b211ae",
+  "graph": {
+    "viewport": {
+      "xmin": -21.746841237209956,
+      "ymin": -14.751058674276614,
+      "xmax": 17.215793902169295,
+      "ymax": 16.66362009069908
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-21.746841237209956",
+      "xmax": "17.215793902169295",
+      "ymin": "-14.751058674276614",
+      "ymax": "16.66362009069908"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#c74440",
+        "latex": "r=a+b\\cos\\theta",
+        "polarDomain": {
+          "min": "\\frac{\\pi}{2}",
+          "max": "\\frac{3\\pi}{2}"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "12",
+        "color": "#c74440",
+        "latex": "r=a+b\\cos\\theta",
+        "lineStyle": "DASHED",
+        "polarDomain": {
+          "min": "-\\frac{\\pi}{2}",
+          "max": "\\frac{\\pi}{2}"
+        },
+        "lineOpacity": "0.2"
+      },
+      {
+        "type": "expression",
+        "id": "2",
+        "color": "#2d70b3",
+        "latex": "a=8",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "8",
+          "max": "8"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "color": "#000000",
+        "latex": "b=0.15",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 5333.333333333333,
+          "isPlaying": true,
+          "min": "0",
+          "max": "6"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "11",
+        "title": "Misc. Second Derivative    d^2(x) / (dy)^2    Stuff",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "9",
+        "folderId": "11",
+        "color": "#000000",
+        "latex": "\\left(b-a,\\ 0\\right)",
+        "showLabel": true,
+        "label": "d^2(x)/(dy)^2 = (${S_rounded})",
+        "dragMode": "NONE"
+      },
+      {
+        "type": "text",
+        "id": "17",
+        "folderId": "11",
+        "text": "Value of d^2(x)/(dy)^2"
+      },
+      {
+        "type": "expression",
+        "id": "8",
+        "folderId": "11",
+        "color": "#2d70b3",
+        "latex": "S_{econdDerivative}=-\\frac{a^{2}-3ab+2b^{2}}{\\left(b-a\\right)^{3}}"
+      },
+      {
+        "type": "text",
+        "id": "19",
+        "folderId": "11",
+        "text": "Rounded value of d^2(x)/(dy)^2"
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "folderId": "11",
+        "color": "#388c46",
+        "latex": "S_{rounded}=\\operatorname{round}\\left(S_{econdDerivative},\\ 2\\right)"
+      },
+      {
+        "type": "text",
+        "id": "21",
+        "folderId": "11",
+        "text": "A parabola with the same second derivative at its vertex"
+      },
+      {
+        "type": "expression",
+        "id": "14",
+        "folderId": "11",
+        "color": "#2d70b3",
+        "latex": "x=\\frac{S_{econdDerivative}}{2}y^{2}+\\left(b-a\\right)",
+        "lineOpacity": "0.6"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}

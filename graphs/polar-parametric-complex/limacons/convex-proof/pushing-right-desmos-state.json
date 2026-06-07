@@ -1,0 +1,66 @@
+{
+  "version": 11,
+  "randomSeed": "0eae038a2b1e4bad0dd40d025163c041",
+  "graph": {
+    "viewport": {
+      "xmin": -16.657778098100742,
+      "ymin": -15.778096981839612,
+      "xmax": 22.304857041278495,
+      "ymax": 13.483156222633772
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-16.657778098100742",
+      "xmax": "22.304857041278495",
+      "ymin": "-15.778096981839612",
+      "ymax": "13.483156222633772"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#c74440",
+        "latex": "r=a+b\\cos\\theta"
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#6042a6",
+        "latex": "a=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "8",
+          "max": "8"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "color": "#000000",
+        "latex": "b=0",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 5333.333333333333,
+          "loopMode": "LOOP_FORWARD",
+          "isPlaying": true,
+          "min": "0",
+          "max": "8"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "color": "#6042a6",
+        "latex": "r=a",
+        "lineStyle": "DASHED"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}
