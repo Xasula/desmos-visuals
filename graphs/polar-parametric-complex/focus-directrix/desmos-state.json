@@ -1,0 +1,273 @@
+{
+  "version": 11,
+  "randomSeed": "a476e83b7b3f74a51b2de86be4828504",
+  "graph": {
+    "viewport": {
+      "xmin": -8.775964715651659,
+      "ymin": -6.487832576405786,
+      "xmax": 11.224035284348348,
+      "ymax": 7.564586778432931
+    },
+    "xAxisArrowMode": "BOTH",
+    "yAxisArrowMode": "BOTH",
+    "degreeMode": true,
+    "product": "geometry-calculator",
+    "__v12ViewportLatexStash": {
+      "xmin": "-8.775964715651659",
+      "xmax": "11.224035284348348",
+      "ymin": "-6.487832576405786",
+      "ymax": "7.564586778432931"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "folder",
+        "id": "**dcg_geo_folder**",
+        "title": "geometry",
+        "secret": true
+      },
+      {
+        "type": "expression",
+        "id": "50",
+        "folderId": "**dcg_geo_folder**",
+        "color": "#6042a6",
+        "latex": "\\token{2}=\\operatorname{segment}\\left(F,P_{current}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "59",
+        "folderId": "**dcg_geo_folder**",
+        "color": "#6042a6",
+        "latex": "\\token{3}=\\operatorname{midpoint}\\left(P_{current},F\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "69",
+        "folderId": "**dcg_geo_folder**",
+        "color": "#6042a6",
+        "latex": "\\token{4}=\\operatorname{midpoint}\\left(\\token{3},F\\right)",
+        "showLabel": true,
+        "label": "d₂=${d_2}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "85",
+        "folderId": "**dcg_geo_folder**",
+        "color": "#fa7e19",
+        "latex": "\\token{6}=\\operatorname{segment}\\left(P_{directrix},P_{current}\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "96",
+        "folderId": "**dcg_geo_folder**",
+        "color": "#6042a6",
+        "latex": "\\token{7}=\\operatorname{midpoint}\\left(\\token{6}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "99",
+        "folderId": "**dcg_geo_folder**",
+        "color": "#6042a6",
+        "latex": "\\token{8}=\\operatorname{midpoint}\\left(\\token{6}\\right)",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "100",
+        "folderId": "**dcg_geo_folder**",
+        "color": "#fa7e19",
+        "latex": "\\token{9}=\\operatorname{midpoint}\\left(\\token{8},P_{directrix}\\right)",
+        "showLabel": true,
+        "label": "d₁=${d_1}",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "3",
+        "text": "Set to desired eccentricity"
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#388c46",
+        "latex": "e_{ccentricity}=1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "0.01",
+          "max": "5"
+        }
+      },
+      {
+        "type": "text",
+        "id": "6",
+        "text": "Press play button for d1 to see how the conic gets graphed"
+      },
+      {
+        "type": "expression",
+        "id": "7",
+        "color": "#000000",
+        "latex": "d_{1}=0.1",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "animationPeriod": 80000,
+          "loopMode": "LOOP_FORWARD",
+          "isPlaying": true,
+          "min": "0",
+          "max": "50"
+        }
+      },
+      {
+        "type": "expression",
+        "id": "21",
+        "color": "#2d70b3",
+        "latex": "d_{2}=d_{1}\\cdot e_{ccentricity}"
+      },
+      {
+        "type": "text",
+        "id": "24",
+        "text": "The resulting conic\nDistance to focus = eccentricity × distance to directrix\nSo d2 = e · d1"
+      },
+      {
+        "type": "expression",
+        "id": "22",
+        "color": "#2d70b3",
+        "latex": "e_{ccentricity}\\cdot\\left|x-x_{directrix}\\right|=\\sqrt{x^{2}+y^{2}}\\ \\left\\{\\sqrt{x^{2}+y^{2}}\\le d_{2}\\right\\}",
+        "lineWidth": "5"
+      },
+      {
+        "type": "folder",
+        "id": "10",
+        "title": "Directrix: d1 is distance from directrix",
+        "collapsed": true
+      },
+      {
+        "type": "text",
+        "id": "26",
+        "folderId": "10",
+        "text": "x position of the directrix"
+      },
+      {
+        "type": "expression",
+        "id": "15",
+        "folderId": "10",
+        "color": "#c74440",
+        "latex": "x_{directrix}=2"
+      },
+      {
+        "type": "expression",
+        "id": "13",
+        "folderId": "10",
+        "color": "#000000",
+        "latex": "x=x_{directrix}"
+      },
+      {
+        "type": "text",
+        "id": "30",
+        "folderId": "10",
+        "text": "Orange segment shows the current distance d1 from the directrix.\nThe relationship is d2 = e · d1."
+      },
+      {
+        "type": "expression",
+        "id": "11",
+        "folderId": "10",
+        "color": "#fa7e19",
+        "latex": "\\left|x_{directrix}-x\\right|\\cdot e_{ccentricity}=d_{2}",
+        "lineStyle": "DASHED"
+      },
+      {
+        "type": "text",
+        "id": "77",
+        "folderId": "10",
+        "text": "A point on the directrix with the same y-coordinate as the current point\n(Just for the sake of labelling)"
+      },
+      {
+        "type": "expression",
+        "id": "78",
+        "folderId": "10",
+        "color": "#000000",
+        "latex": "P_{directrix}=\\left(x_{directrix},\\ y_{current}\\right)",
+        "showLabel": true,
+        "label": "Directrix",
+        "dragMode": "NONE",
+        "labelOrientation": "above_right",
+        "pointSize": "0",
+        "movablePointSize": "0"
+      },
+      {
+        "type": "folder",
+        "id": "12",
+        "title": "Focus: d2 is distance from focus",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "16",
+        "folderId": "12",
+        "color": "#000000",
+        "latex": "F=\\left(0,\\ 0\\right)",
+        "showLabel": true,
+        "label": "Focus",
+        "dragMode": "NONE",
+        "labelOrientation": "below_left",
+        "pointSize": "12",
+        "movablePointSize": "12"
+      },
+      {
+        "type": "text",
+        "id": "109",
+        "folderId": "12",
+        "text": "Circle that denotes the current distance from the origin/focus"
+      },
+      {
+        "type": "expression",
+        "id": "17",
+        "folderId": "12",
+        "color": "#6042a6",
+        "latex": "r>d_{2}",
+        "polarDomain": {
+          "min": "-270",
+          "max": "90"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "40",
+        "title": "Current Point on the Conic",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "42",
+        "folderId": "40",
+        "color": "#6042a6",
+        "latex": "x_{current}=x_{directrix}-d_{1}"
+      },
+      {
+        "type": "expression",
+        "id": "75",
+        "folderId": "40",
+        "color": "#c74440",
+        "latex": "y_{current}=\\sqrt{d_{2}^{2}-x_{current}^{2}}"
+      },
+      {
+        "type": "expression",
+        "id": "41",
+        "folderId": "40",
+        "color": "#2d70b3",
+        "latex": "P_{current}=\\left(x_{current},\\ y_{current}\\right)",
+        "showLabel": true,
+        "label": "P_current",
+        "pointSize": "15",
+        "movablePointSize": "15"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}
