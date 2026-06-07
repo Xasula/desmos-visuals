@@ -56,7 +56,7 @@
         "type": "expression",
         "id": "5",
         "color": "#000000",
-        "latex": "b=0.15",
+        "latex": "b=0",
         "slider": {
           "hardMin": true,
           "hardMax": true,
@@ -69,7 +69,7 @@
       {
         "type": "folder",
         "id": "11",
-        "title": "Misc. Second Derivative    d^2(x) / (dy)^2    Stuff",
+        "title": "Misc. Second Derivative    d²(x) / (dy)²    Stuff",
         "collapsed": true
       },
       {
@@ -79,14 +79,14 @@
         "color": "#000000",
         "latex": "\\left(b-a,\\ 0\\right)",
         "showLabel": true,
-        "label": "d^2(x)/(dy)^2 = (${S_rounded})",
+        "label": "d²(x) / (dy)²  = (${S_rounded})",
         "dragMode": "NONE"
       },
       {
         "type": "text",
         "id": "17",
         "folderId": "11",
-        "text": "Value of d^2(x)/(dy)^2"
+        "text": "Value of d²(x) / (dy)²"
       },
       {
         "type": "expression",
@@ -99,7 +99,7 @@
         "type": "text",
         "id": "19",
         "folderId": "11",
-        "text": "Rounded value of d^2(x)/(dy)^2"
+        "text": "Rounded value of d²(x) / (dy)²"
       },
       {
         "type": "expression",
