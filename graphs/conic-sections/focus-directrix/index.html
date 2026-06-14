@@ -11,6 +11,80 @@
     <body>
         <h1>Overview</h1>
 
+        <section>
+            <h2>The Big Idea</h2>
+
+            <p>
+                A conic section can be built from two competing distances:
+                <code>d<sub>1</sub></code>, the distance from a point to the directrix,
+                and <code>d<sub>2</sub></code>, the distance from the same point to the focus.
+                The eccentricity <code>e</code> controls how these distances compare:
+            </p>
+
+            <div class="formula">
+                <code>d<sub>2</sub> = e d<sub>1</sub></code>
+            </div>
+
+            <p>
+                In the graph, the vertical orange lines represent all points that are <code>d<sub>1</sub></code>
+                away from the directrix; the purple circle represents all points taht are <code>d<sub>2</sub></code>
+                away from the focus (origin). As <code>d<sub>1</sub></code> increases, watch how
+                the purple circle grows compared to the spacing of the orange lines. The higher the <code>e</code>,
+                the faster <code>d<sub>2</sub></code> grows relative to <code>d<sub>1</sub></code>.
+            </p>
+
+            <p>
+                When <code>e &lt; 1</code>, the purple circle grows more slowly than the
+                orange directrix-distance lines move outward. The left orange line eventually
+                catches up to the left end of the purple circle, closing the blue curve.
+                The points stay bounded and form an ellipse.
+            </p>
+
+            <p>
+                When <code>e = 1</code>, the purple circle and the orange lines move at the
+                same pace. This means two things:
+            </p>
+
+            <ol>
+                <li>
+                    The left orange line never catches up to the left edge of the purple circle,
+                    so the blue curve never closes back on itself.
+                </li>
+                <li>
+                    The right edge of the purple circle also never catches up to the right orange
+                    line, so no second branch appears on the right.
+                </li>
+            </ol>
+
+            <p>
+                When <code>e &gt; 1</code>, the purple circle grows faster than the orange
+                directrix-distance lines move outward. It outruns the directrix distance.
+                This means two things:
+            </p>
+
+            <ol>
+                <li>
+                    The left orange line never catches up to the left edge of the purple circle,
+                    so the blue curve stays open.
+                </li>
+                <li>
+                    The right edge of the purple circle eventually catches up to the right orange
+                    line, creating a second blue branch on the right side.
+                </li>
+            </ol>
+
+        </section>
+
+        <section>
+            <h2>What You Should Notice</h2>
+
+            <p>
+                Eccentricity is not just a number that labels the conic. It describes the
+                “speed ratio” between the focus distance and the directrix distance.
+                Ellipses, parabolas, and hyperbolas come from changing that one ratio.
+            </p>
+        </section>
+
         <div id="calculator"></div>
 
         <p>
