@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Focus-Directrix Property</title>
         <link rel="stylesheet" href="../../../style.css">
 
@@ -9,7 +10,7 @@
     </head>
 
     <body>
-        <h1>Overview</h1>
+        <h1>The Focus-Directrix Property</h1>
 
         <section>
             <h2>The Big Idea</h2>
@@ -27,12 +28,22 @@
 
             <p>
                 In the graph, the vertical orange lines represent all points that are <code>d<sub>1</sub></code>
-                away from the directrix; the purple circle represents all points taht are <code>d<sub>2</sub></code>
+                away from the directrix; the purple circle represents all points that are <code>d<sub>2</sub></code>
                 away from the focus (origin). As <code>d<sub>1</sub></code> increases, watch how
                 the purple circle grows compared to the spacing of the orange lines. The higher the <code>e</code>,
                 the faster <code>d<sub>2</sub></code> grows relative to <code>d<sub>1</sub></code>.
             </p>
 
+            <p>
+                The blue curve is traced by the intersection points between the orange
+                directrix-distance lines and the purple focus-distance circle.
+            </p>
+        </section>
+        
+        <section>
+            <h2>Ellipse, Parabola, or Hyperbola?</h2>
+
+            <h3>Ellipse</h3>
             <p>
                 When <code>e &lt; 1</code>, the purple circle grows more slowly than the
                 orange directrix-distance lines move outward. The left orange line eventually
@@ -40,11 +51,11 @@
                 The points stay bounded and form an ellipse.
             </p>
 
+            <h3>Parabola</h3>
             <p>
                 When <code>e = 1</code>, the purple circle and the orange lines move at the
                 same pace. This means two things:
             </p>
-
             <ol>
                 <li>
                     The left orange line never catches up to the left edge of the purple circle,
@@ -56,12 +67,12 @@
                 </li>
             </ol>
 
+            <h3>Hyperbola</h3>
             <p>
                 When <code>e &gt; 1</code>, the purple circle grows faster than the orange
                 directrix-distance lines move outward. It outruns the directrix distance.
                 This means two things:
             </p>
-
             <ol>
                 <li>
                     The left orange line never catches up to the left edge of the purple circle,
@@ -72,16 +83,15 @@
                     line, creating a second blue branch on the right side.
                 </li>
             </ol>
-
         </section>
 
         <section>
             <h2>What You Should Notice</h2>
 
             <p>
-                Eccentricity is not just a number that labels the conic. It describes the
-                “speed ratio” between the focus distance and the directrix distance.
-                Ellipses, parabolas, and hyperbolas come from changing that one ratio.
+                Eccentricity describes the “speed ratio” between the focus distance and
+                the directrix distance. Ellipses, parabolas, and hyperbolas come from
+                changing that one ratio.
             </p>
         </section>
 
