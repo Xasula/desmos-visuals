@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Product Rule as Growing Area</title>
+        <link rel="stylesheet" href="../../../style.css">
+
+        <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=c8a09e8f7af44edcaa08fdf5892c43b4"></script>
+    </head>
+
+    <body>
+        <main>
+            <h1>Product Rule as Growing Area</h1>
+
+            <section>
+                <h2>Overview</h2>
+
+                <p>
+                    Say we have a function
+                    <code>f(t) = a(t)b(t)</code>.
+                    The derivative of this function is
+                </p>
+
+                <div class="formula">
+                    <code>f'(t) = a'(t)b(t) + a(t)b'(t)</code>
+                </div>
+
+                <p>
+                    This is called the <strong>Product Rule</strong>. At first, it can feel like
+                    this formula comes out of nowhere. There is a formal proof, but this visual
+                    focuses on the intuition behind why the rule must be true.
+                </p>
+
+                <p>
+                    Think of <code>a(t)</code> as the width of a rectangle and
+                    <code>b(t)</code> as the height. Then the product
+                    <code>a(t)b(t)</code> is the area of that rectangle.
+                </p>
+
+                <div id="calculator-blue" class="desmos-calculator"></div>
+
+                <p>
+                    Now give <code>t</code> a tiny nudge, called <code>dt</code>.
+                    The width changes by <code>da</code>, and the height changes by
+                    <code>db</code>. So the area changes too.
+                </p>
+
+                <p>
+                    The big question is:
+                </p>
+
+                <div class="formula">
+                    <code>Why is df/dt = (da/dt)b + a(db/dt)?</code>
+                </div>
+
+                <p>
+                    Before looking at the rate of change, focus on the actual change in area,
+                    <code>df</code>. The new added area comes mostly from two thin strips:
+                </p>
+
+                <div class="formula">
+                    <code>df ≈ da · b + a · db</code>
+                </div>
+
+                <p>
+                    Dividing by <code>dt</code> gives the derivative form:
+                </p>
+
+                <div class="formula">
+                    <code>df/dt = (da/dt)b + a(db/dt)</code>
+                </div>
+
+                <p>
+                    The visual below shows where those two pieces come from.
+                </p>
+            </section>
+
+            <div id="calculator-main" class="desmos-calculator"></div>
+
+            <section>
+                <h2>Explaining the colors</h2>
+
+                <p>
+                    The <strong style="color: #2d70b3;">blue rectangle</strong> is the original
+                    area <code>a(t)b(t)</code>. This is the value of <code>f(t)</code> before
+                    changing <code>t</code>.
+                </p>
+
+                <p>
+                    The <strong style="color: #6042a6;">purple strip</strong> appears because
+                    the width changes by <code>da</code>. Its height is still approximately
+                    <code>b(t)</code>, so its area is
+                    <code>da · b(t)</code>.
+                </p>
+
+                <p>
+                    The <strong style="color: #388c46;">green strip</strong> appears because
+                    the height changes by <code>db</code>. Its width is still approximately
+                    <code>a(t)</code>, so its area is
+                    <code>a(t) · db</code>.
+                </p>
+
+                <p>
+                    The small <strong>black corner</strong> has area
+                    <code>da · db</code>. This piece is real, but it becomes tiny much faster
+                    than the two strips as <code>dt</code> gets closer to <code>0</code>.
+                    In the derivative, that corner disappears.
+                </p>
+
+                <div class="formula">
+                    <code>df = da &cdot; b + a &cdot; db + da &cdot; db</code>
+                </div>
+
+                <p>
+                    As <code>dt &rightarrow; 0</code>, the corner term <code>da &cdot; db</code> becomes
+                    negligible, leaving the product rule:
+                </p>
+
+                <div class="formula">
+                    <code>d(ab) = da &cdot; b + a &cdot; db</code>
+                </div>
+
+                <div class="formula">
+                    <code>d(ab)/dt = da/dt &cdot; b + a &cdot; db/dt</code>
+                </div>
+
+                <div class="formula">
+                    <code>(ab)' = a'b + ab'</code>
+                </div>
+            </section>
+
+            <section>
+                <h2>What you should notice</h2>
+
+                <p>
+                    The derivative of a product has two main terms because both factors can
+                    change. One term measures the effect of changing <code>a(t)</code> while
+                    keeping <code>b(t)</code> fixed. The other measures the effect of changing
+                    <code>b(t)</code> while keeping <code>a(t)</code> fixed.
+                </p>
+            </section>
+
+            <section>
+                <h2>Try changing...</h2>
+
+                <ul>
+                    <li><code>t</code>, to move to a different moment in time.</li>
+                    <li><code>h</code>, to make the change in <code>t</code> smaller or larger.</li>
+                    <li><code>a(t)</code> and <code>b(t)</code>, to test different products.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Guided questions</h2>
+
+                <ol>
+                    <li>Which part of the picture represents the original product <code>a(t)b(t)</code>?</li>
+                    <li>Which added region comes from the change in <code>a(t)</code>?</li>
+                    <li>Which added region comes from the change in <code>b(t)</code>?</li>
+                    <li>What happens to the black corner as <code>h</code> gets smaller?</li>
+                    <li>Why does the product rule need two terms instead of just one?</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Common misconception</h2>
+
+                <p>
+                    A common mistake is thinking that the derivative of a product should be
+                    <code>a'(t)b'(t)</code>. But the picture shows that the change in area does
+                    not come from multiplying the two changes together. It mostly comes from
+                    the two strips: <code>da · b</code> and <code>a · db</code>.
+                </p>
+            </section>
+
+            <p>
+                <a href="../../../index.html">← Back to gallery</a>
+            </p>
+        </main>
+
+        <script>
+            function loadDesmosCalculator(elementId, stateFile) {
+                const element = document.getElementById(elementId);
+
+                const calculator = Desmos.GraphingCalculator(element, {
+                    expressions:  true,
+                    settingsMenu: true,
+                    zoomButtons:  true
+                });
+
+                fetch(stateFile)
+                    .then(response => response.json())
+                    .then(state => {calculator.setState(state)})
+                    .catch(error => {console.error("Error loading Desmos state:", error);});
+            }
+
+            loadDesmosCalculator("calculator-blue", "desmos-state-blue.json");
+            loadDesmosCalculator("calculator-main", "desmos-state-main.json");
+        </script>
+    </body>
+</html>

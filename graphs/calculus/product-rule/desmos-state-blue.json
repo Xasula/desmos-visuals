@@ -1,0 +1,149 @@
+{
+  "version": 11,
+  "randomSeed": "9a8bf7bf0b9ab0aa3c0d64eb869661a0",
+  "graph": {
+    "viewport": {
+      "xmin": -1.01422072006957,
+      "ymin": -0.9992078930372164,
+      "xmax": 3.9455820298068804,
+      "ymax": 2.725643970529271
+    },
+    "showGrid": false,
+    "xAxisArrowMode": "BOTH",
+    "yAxisArrowMode": "BOTH",
+    "xAxisLabel": "a-value",
+    "yAxisLabel": "b-value",
+    "xAxisNumbers": false,
+    "yAxisNumbers": false,
+    "polarNumbers": false,
+    "__v12ViewportLatexStash": {
+      "xmin": "-1.01422072006957",
+      "xmax": "3.9455820298068804",
+      "ymin": "-0.9992078930372164",
+      "ymax": "2.725643970529271"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#c74440",
+        "latex": "f\\left(t\\right)=a\\left(t\\right)\\cdot b\\left(t\\right)",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "3",
+        "text": "Replace a(t) and b(t) with whatever functions you would like to work with\nPositive, increasing functions are preferrable."
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#388c46",
+        "latex": "a\\left(t\\right)=t^{2}",
+        "hidden": true
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "color": "#6042a6",
+        "latex": "b\\left(t\\right)=1.5^{t}",
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "id": "11",
+        "text": "Current value of the argument"
+      },
+      {
+        "type": "expression",
+        "id": "6",
+        "color": "#000000",
+        "latex": "t=1.5",
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "3"
+        }
+      },
+      {
+        "type": "folder",
+        "id": "13",
+        "title": "Rectangle",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "16",
+        "folderId": "13",
+        "color": "#000000",
+        "latex": "\\left(a\\left(t\\right),\\ 0\\right)",
+        "showLabel": true,
+        "label": "a(t)=${a_current}",
+        "dragMode": "NONE",
+        "labelOrientation": "below_left"
+      },
+      {
+        "type": "expression",
+        "id": "18",
+        "folderId": "13",
+        "color": "#000000",
+        "latex": "\\left(0,\\ b\\left(t\\right)\\right)",
+        "showLabel": true,
+        "label": "b(t)=${b_current}",
+        "labelOrientation": "below_left"
+      },
+      {
+        "type": "expression",
+        "id": "25",
+        "folderId": "13",
+        "color": "#2d70b3",
+        "latex": "\\left(\\frac{a\\left(t\\right)}{2},\\frac{b\\left(t\\right)}{2}\\right)",
+        "showLabel": true,
+        "label": "a(t)*b(t)=${A_current}",
+        "hidden": true,
+        "pointOpacity": "1",
+        "pointSize": "0",
+        "movablePointSize": "0"
+      },
+      {
+        "type": "expression",
+        "id": "31",
+        "folderId": "13",
+        "color": "#2d70b3",
+        "latex": "0\\le x\\le a\\left(t\\right)\\left\\{0\\le y\\le b\\left(t\\right)\\right\\}"
+      },
+      {
+        "type": "folder",
+        "id": "60",
+        "title": "Value Indicators",
+        "collapsed": true
+      },
+      {
+        "type": "expression",
+        "id": "61",
+        "folderId": "60",
+        "color": "#2d70b3",
+        "latex": "a_{current}=\\operatorname{round}\\left(a\\left(t\\right),\\ 2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "62",
+        "folderId": "60",
+        "color": "#388c46",
+        "latex": "b_{current}=\\operatorname{round}\\left(b\\left(t\\right),\\ 2\\right)"
+      },
+      {
+        "type": "expression",
+        "id": "63",
+        "folderId": "60",
+        "color": "#6042a6",
+        "latex": "A_{current}=\\operatorname{round}\\left(a_{current}\\cdot b_{current},\\ 2\\right)"
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}
