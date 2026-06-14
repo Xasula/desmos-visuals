@@ -36,8 +36,16 @@
                     <code>b(t)</code> as the height. Then the product
                     <code>a(t)b(t)</code> is the area of that rectangle.
                 </p>
-
-                <div id="calculator-blue" class="desmos-calculator"></div>
+                
+                <div class="desmos-card">
+                    <div id="calculator-blue" class="desmos-calculator"></div>
+                    <p class="caption">
+                        Change the value of <code>t</code>. As you change <code>t</code>, the values of
+                        <code>a(t)</code> and <code>b(t)</code> also change. As a result, the area
+                        <code>f(t) = a(t)b(t)</code> changes.
+                    </p>
+                </div>
+                
 
                 <p>
                     Now give <code>t</code> a tiny nudge, called <code>dt</code>.
@@ -55,28 +63,27 @@
 
                 <p>
                     Before looking at the rate of change, focus on the actual change in area,
-                    <code>df</code>. The new added area comes mostly from two thin strips:
+                    <code>df</code>. The new added area is the difference between the original blue
+                    rectangle's area <code>f(t)</code> and the new rectangle's area <code>f(t+dt)</code>:
                 </p>
 
                 <div class="formula">
-                    <code>df ≈ da · b + a · db</code>
+                    <code>df = f(t+dt) - f(t) = a(t+dt)b(t+dt) - a(t)b(t) = d(ab)</code>
                 </div>
 
                 <p>
-                    Dividing by <code>dt</code> gives the derivative form:
-                </p>
-
-                <div class="formula">
-                    <code>df/dt = (da/dt)b + a(db/dt)</code>
-                </div>
-
-                <p>
-                    The visual below shows where those two pieces come from.
+                    The visual below shows where the extra area comes from.
                 </p>
             </section>
 
-            <div id="calculator-main" class="desmos-calculator"></div>
-
+            <div class="desmos-card">
+                <div id="calculator-main" class="desmos-calculator"></div>
+                <p class="caption">
+                    Imagine you increase the value of t by a very small amount <code>h = dt</code>.
+                    The additional area comes from the green, purple, and black rectangles.
+                </p>
+            </div>
+            
             <section>
                 <h2>Explaining the colors</h2>
 
@@ -102,26 +109,26 @@
 
                 <p>
                     The small <strong>black corner</strong> has area
-                    <code>da · db</code>. This piece is real, but it becomes tiny much faster
-                    than the two strips as <code>dt</code> gets closer to <code>0</code>.
+                    <code>da · db</code>. Since <code>dt</code> is infinitesimal,
+                    the black area is negligible compared to the purple or green strips.
                     In the derivative, that corner disappears.
                 </p>
 
                 <div class="formula">
-                    <code>df = da &cdot; b + a &cdot; db + da &cdot; db</code>
+                    <code>df = da · b + a · db + da · db</code>
                 </div>
 
                 <p>
-                    As <code>dt &rightarrow; 0</code>, the corner term <code>da &cdot; db</code> becomes
+                    As <code>dt &rightarrow; 0</code>, the corner term <code>da · db</code> becomes
                     negligible, leaving the product rule:
                 </p>
 
                 <div class="formula">
-                    <code>d(ab) = da &cdot; b + a &cdot; db</code>
+                    <code>d(ab) = da · b + a · db</code>
                 </div>
 
                 <div class="formula">
-                    <code>d(ab)/dt = da/dt &cdot; b + a &cdot; db/dt</code>
+                    <code>d(ab)/dt = da/dt · b + a · db/dt</code>
                 </div>
 
                 <div class="formula">
