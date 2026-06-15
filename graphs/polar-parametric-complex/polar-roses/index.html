@@ -35,7 +35,7 @@
 
         <p>
             The graph below shows how the rose curve is traced as <code>&theta;</code>
-            increases from <code>&theta;</code> to <code>2&pi;</code>. The red parts correspond
+            increases from <code>0</code> to <code>2&pi;</code>. The red parts correspond
             to positive radius values, while the blue parts correspond to negative radius values.
         </p>
 
@@ -57,6 +57,92 @@
         </p>
 
         <div id="calculator-transitions" class="calculator"></div>
+
+        <h2>Another Way to Think About It</h2>
+
+        <p>
+            There is another useful way to understand why
+            <code>r = cos(n&theta;)</code> has <code>n</code> petals when
+            <code>n</code> is odd but <code>2n</code> petals when <code>n</code> is even.
+        </p>
+
+        <p>
+            Start by looking at
+            <code>r = |cos(n&theta;)|</code>.
+            Now we only care about the <em>distance</em> from the pole, not the sign of
+            <code>r</code>. So whenever <code>cos(n&theta;)</code> is negative, the absolute
+            value makes it positive instead of sending the point to the opposite side.
+        </p>
+
+        <p>
+            Because of this, the graph of <code>r = |cos(n&theta;)|</code> always stays in the
+            current <code>&theta;</code>-direction, and for positive integer values of
+            <code>n</code> it always has exactly <code>2n</code> petals.
+        </p>
+
+        <div id="calculator-abs-cosine" class="calculator"></div>
+
+        <p>
+            <em>Vary the value of <code>n</code>. You can see that
+            <code>|cos(n&theta;)|</code> has exactly <code>2n</code> peaks from
+            <code>0</code> to <code>2&pi;</code>.</em>
+        </p>
+
+        <p>
+            Consider <code>r = |cos(3&theta;)|</code>. The parts where
+            <code>cos(3&theta;)</code> is positive are shown in red, so the absolute value
+            does nothing to them. The parts where <code>cos(3&theta;)</code> is negative are
+            shown in green, and the absolute value flips those radii to positive values.
+            So instead of being graphed on the opposite side, those green parts are graphed in
+            the current direction.
+        </p>
+
+        <img
+            src="n3.gif"
+            alt="Animation showing r equals absolute value of cosine of 3 theta becoming r equals cosine of 3 theta"
+            class="visual-gif"
+        >
+        
+        <p>
+            This gives a graph with <code>2n = 6</code> petals. Now imagine slowly “lifting”
+            the absolute value and turning <code>|cos(3&theta;)|</code> back into
+            <code>cos(3&theta;)</code>. The red petals stay where they are, because those
+            values were already positive. But the green petals move to the opposite side,
+            because those values were originally negative. When they move, they land exactly on
+            top of existing red petals. That is why <code>r = cos(3&theta;)</code> ends up with
+            only <code>3</code> distinct petals.
+        </p>
+
+        <p>
+            Now try the same idea with <code>r = |cos(4&theta;)|</code>. Again, the graph has
+            <code>2n = 8</code> petals. When we lift the absolute value, the red petals stay in
+            place, and the green petals move to the opposite side. But this time, the green
+            petals do not land on top of red petals. Instead, they simply swap positions with
+            other green petals. So there is no overlap, and the graph
+            <code>r = cos(4&theta;)</code> still has all <code>8</code> petals.
+        </p>
+
+        <img
+            src="n4.gif"
+            alt="Animation showing r equals absolute value of cosine of 4 theta becoming r equals cosine of 4 theta"
+            class="visual-gif"
+        >
+
+        <p>
+            This gives another way to think about the odd/even difference:
+        </p>
+
+        <ul>
+            <li>
+                When <code>n</code> is <strong>odd</strong>, lifting the absolute value makes
+                some petals move onto existing petals, so the <code>2n</code> petals collapse
+                into just <code>n</code> distinct petals.
+            </li>
+            <li>
+                When <code>n</code> is <strong>even</strong>, lifting the absolute value only
+                rearranges the petals, so there are still <code>2n</code> distinct petals.
+            </li>
+        </ul>
 
         <p>
             <a href="../../../index.html">← Back to gallery</a>
@@ -80,6 +166,7 @@
 
             loadDesmosCalculator("calculator-graphing", "desmos-state-graphing.json");
             loadDesmosCalculator("calculator-transitions", "desmos-state-transitions.json");
+            loadDesmosCalculator("calculator-abs-cosine", "desmos-state-abs-cosine.json")
         </script>
     </body>
 </html>
