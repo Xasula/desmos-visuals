@@ -1,0 +1,63 @@
+{
+  "version": 11,
+  "randomSeed": "ff3f4ab5dc349878987189c5b69152c0",
+  "graph": {
+    "viewport": {
+      "xmin": -1.8723532959358198,
+      "ymin": -2.9637872682772555,
+      "xmax": 8.393892777233978,
+      "ymax": 4.746246324980374
+    },
+    "__v12ViewportLatexStash": {
+      "xmin": "-1.8723532959358198",
+      "xmax": "8.393892777233978",
+      "ymin": "-2.9637872682772555",
+      "ymax": "4.746246324980374"
+    }
+  },
+  "expressions": {
+    "list": [
+      {
+        "type": "expression",
+        "id": "1",
+        "color": "#c74440",
+        "latex": "x=\\left[-200\\pi,\\ -198\\pi,\\ ...,\\ 200\\pi\\right]"
+      },
+      {
+        "type": "expression",
+        "id": "5",
+        "color": "#000000",
+        "latex": "\\cos\\left(nx\\right)",
+        "lineStyle": "DASHED",
+        "lineOpacity": "0.2"
+      },
+      {
+        "type": "expression",
+        "id": "3",
+        "color": "#388c46",
+        "latex": "\\left|\\cos\\left(nx\\right)\\right|"
+      },
+      {
+        "type": "text",
+        "id": "9",
+        "text": "Change the value of n"
+      },
+      {
+        "type": "expression",
+        "id": "4",
+        "color": "#6042a6",
+        "latex": "n=1",
+        "hidden": true,
+        "slider": {
+          "hardMin": true,
+          "hardMax": true,
+          "min": "1",
+          "max": "4",
+          "step": "1"
+        }
+      }
+    ]
+  },
+  "includeFunctionParametersInRandomSeed": true,
+  "doNotMigrateMovablePointStyle": true
+}
