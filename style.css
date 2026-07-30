@@ -194,3 +194,6 @@ body {
         height: 460px;
     }
 }
+
+/* View Count Hits */
+#view-count img { vertical-align: middle; margin-left: 0.5rem; }
