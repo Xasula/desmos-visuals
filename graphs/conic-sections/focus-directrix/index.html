@@ -6,11 +6,14 @@
         <title>The Focus-Directrix Property</title>
         <link rel="stylesheet" href="../../../style.css">
 
-        <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=c8a09e8f7af44edcaa08fdf5892c43b4"></script>
+        <script src="../../../js/desmos-loader.js"></script>
     </head>
 
     <body>
         <h1>The Focus-Directrix Property</h1>
+        <p class="view-count">
+            Page Views: <span id="view-count"></span>
+        </p>
 
         <section>
             <h2>The Big Idea</h2>
@@ -111,18 +114,8 @@
         </p>
         
         <script>
-            const element = document.getElementById("calculator");
-
-            const calculator = Desmos.Geometry(element, {
-                expressions:  true,
-                settingsMenu: true,
-                zoomButtons:  true
-            });
-
-            fetch("desmos-state.json")
-                .then(response => response.json())
-                .then(state => {calculator.setState(state)})
-                .catch(error => {console.error("Error loading Desmos state:", error);});
+            loadDesmosCalculator("calculator", "desmos-state.json")
         </script>
+        <script src="../../../js/hits-counter.js"></script>
     </body>
 </html>

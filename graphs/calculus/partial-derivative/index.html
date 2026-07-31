@@ -5,11 +5,14 @@
         <title>Partial Derivative Slice Visualizer</title>
         <link rel="stylesheet" href="../../../style.css">
 
-        <script src="https://www.desmos.com/api/v1.13/calculator.js?apiKey=c8a09e8f7af44edcaa08fdf5892c43b4"></script>
+        <script src="../../../js/desmos-loader.js"></script>
     </head>
 
     <body>
         <h1>Partial Derivative Slice Visualizer</h1>
+        <p class="view-count">
+            Page Views: <span id="view-count"></span>
+        </p>
 
         <p>
             This visualization shows how a partial derivative measures the slope of a
@@ -45,18 +48,8 @@
         </p>
 
         <script>
-            const element = document.getElementById("calculator");
-
-            const calculator = Desmos.Calculator3D(element, {
-                expressions:  true,
-                settingsMenu: true,
-                zoomButtons:  true
-            });
-
-            fetch("desmos-state.json")
-                .then(response => response.json())
-                .then(state => {calculator.setState(state)})
-                .catch(error => {console.error("Error loading Desmos state:", error);});
+            loadDesmosCalculator("calculator", "desmos-state.json", "3d")
         </script>
+        <script src="../../../js/hits-counter.js"></script>
     </body>
 </html>

@@ -12,8 +12,8 @@
     if (!target) return;
 
     var key = (location.host + location.pathname)
-        .replace(/index\.html$/, "")
-        .replace(/\/$/, "");
+        .replace(/index\.html$/, "")  // remove "index.html"
+        .replace(/\/$/, "");          // remove trailing slash "/"
 
     var img = document.createElement("img");
     img.alt = "View count";

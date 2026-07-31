@@ -5,11 +5,14 @@
         <title>Lemniscate of Bernoulli Visualizer</title>
         <link rel="stylesheet" href="../../../style.css">
 
-        <script src="https://www.desmos.com/api/v1.12/calculator.js?apiKey=c8a09e8f7af44edcaa08fdf5892c43b4"></script>
+        <script src="../../../js/desmos-loader.js"></script>
     </head>
 
     <body>
         <h1>Lemniscate of Bernoulli Visualizer</h1>
+        <p class="view-count">
+            Page Views: <span id="view-count"></span>
+        </p>
 
         <h2>Overview</h2>
 
@@ -58,23 +61,9 @@
         </p>
 
         <script>
-            function loadDesmosCalculator(elementId, stateFile) {
-                const element = document.getElementById(elementId);
-
-                const calculator = Desmos.GraphingCalculator(element, {
-                    expressions:  true,
-                    settingsMenu: true,
-                    zoomButtons:  true
-                });
-
-                fetch(stateFile)
-                    .then(response => response.json())
-                    .then(state => {calculator.setState(state)})
-                    .catch(error => {console.error("Error loading Desmos state:", error);});
-            }
-
             loadDesmosCalculator("calculator-lemniscate", "desmos-state-lemniscate.json");
             loadDesmosCalculator("calculator-square-root", "desmos-state-square-root.json");
         </script>
+        <script src="../../../js/hits-counter.js"></script>
     </body>
 </html>
